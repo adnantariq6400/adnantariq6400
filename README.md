@@ -10,8 +10,9 @@ I'm a I am a **Bioinformatics enthusiast** Equipped with a strong background in 
 ---
 
 ### 🔬 Current Projects
-- **[T2D and Gut Metagenome-Host Interactions]**: A [•Identified exclusive CAZyme proteins, and Taxa associated with T2D patients
--                                                    • Employed NGS Techniques, Metagenome Analysis, Linux & Bash Scripting, Gene Family Prediction].
+- **[T2D and Gut Metagenome-Host Interactions]**:
+- [•Identified exclusive CAZyme proteins, and Taxa associated with T2D patients
+- • Employed NGS Techniques, Metagenome Analysis, Linux & Bash Scripting, Gene Family Prediction].
 - **[Environmental Antibiotic Exposure in Zebrafish Gut Metagenomes]**: Using Machine learning, Metagenomic Analysis, and R to identify the environmental antimicrobial resistance genes and microbial biomarkers].
 
 ---
