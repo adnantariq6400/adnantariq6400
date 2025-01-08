@@ -4,8 +4,7 @@ I'm a I am a **Bioinformatics enthusiast** Equipped with a strong background in 
 
 ---
 
-### 📄 Checkout My CV/Resume
-[📄 View My CV](https://github.com/adnantariq6400/adnantariq6400/blob/main/CV_Resume.pdf))
+### 📄 Checkout My CV/Resume(https://github.com/adnantariq6400/adnantariq6400/blob/main/CV_Resume.pdf))
 
 ---
 
