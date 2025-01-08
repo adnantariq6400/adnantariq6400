@@ -15,7 +15,7 @@ I'm a I am a **Bioinformatics enthusiast** Equipped with a strong background in 
 ---
 
 ### 📚 Research Interests
-- **NGS data analysis**and Multi-Omics
+- **NGS data analysis** and Multi-Omics
 - **Microbiome-host interactions**
 - **Metagenomics**
 - **Machine learning and computational modeling**
