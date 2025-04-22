@@ -8,24 +8,86 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: #4361ee;
-            --primary-light: #4895ef;
-            --primary-dark: #3a0ca3;
-            --secondary: #7209b7;
-            --accent: #f72585;
-            --text: #2b2d42;
-            --text-light: #8d99ae;
-            --bg: #f8f9fa;
-            --card-bg: #ffffff;
-            --border: #e9ecef;
-            --dark-text: #edf2f4;
-            --dark-text-light: #adb5bd;
-            --dark-bg: #121212;
-            --dark-card-bg: #1e1e1e;
-            --dark-border: #333333;
-            --gradient: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-        }
+  /* Primary Colors (Now More Vibrant) */
+  --primary: #4361ee;      /* Royal Blue */
+  --primary-light: #4895ef; /* Lighter Blue */
+  --primary-dark: #3a0ca3;  /* Deep Purple-Blue */
+  --secondary: #7209b7;    /* Purple */
+  --accent: #f72585;       /* Pink */
 
+  /* Light Mode Colors (Warmer & Softer) */
+  --text: #2b2d42;         /* Dark Navy (Better Contrast) */
+  --text-light: #5c677d;   /* Soft Gray-Blue (Easier on Eyes) */
+  --bg: #f8f9fa;           /* Off-White (Not Pure #FFF) */
+  --card-bg: #ffffff;      /* Pure White Cards (For Contrast) */
+  --border: #e9ecef;       /* Light Gray Border */
+  --highlight: #f8f4ff;    /* Soft Purple Tint for Sections */
+
+  /* Dark Mode Colors (Same as Before) */
+  --dark-text: #edf2f4;
+  --dark-text-light: #adb5bd;
+  --dark-bg: #121212;
+  --dark-card-bg: #1e1e1e;
+  --dark-border: #333333;
+
+  /* Gradients */
+  --gradient: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  --card-shadow: 0 8px 30px rgba(0, 0, 0, 0.08); /* Subtler shadow in light mode */
+}
+/* ====================
+   LIGHT MODE ENHANCEMENTS 
+   ==================== */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* Header with subtle gradient */
+header {
+  background: linear-gradient(to right, #ffffff 0%, #f8f9fa 100%);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Cards with soft shadows */
+.education-item, 
+.experience-item, 
+.publication-item, 
+.skill-category {
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+/* Hover effects for cards */
+.education-item:hover,
+.experience-item:hover,
+.publication-item:hover,
+.skill-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(67, 97, 238, 0.15);
+  border-color: var(--primary-light);
+}
+
+/* Section backgrounds with texture */
+.about, .publications {
+  background-color: var(--highlight);
+  background-image: radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.03) 1px, transparent 0);
+  background-size: 20px 20px;
+}
+
+/* Buttons with depth */
+.btn {
+  box-shadow: 0 4px 15px rgba(67, 97, 238, 0.25);
+}
+.btn:hover {
+  box-shadow: 0 6px 20px rgba(67, 97, 238, 0.4);
+}
+
+/* Profile image glow */
+.profile-img {
+  box-shadow: 0 10px 30px rgba(67, 97, 238, 0.2);
+}
         * {
             margin: 0;
             padding: 0;
