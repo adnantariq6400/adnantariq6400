@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hafiz Muhammad Adnan Tariq</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1 {
+      font-size: 2rem;
+      color: #2c3e50;
+    }
+    p {
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+    }
+    .emoji {
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>👋 Hi there</h1>
+  <p>This is <strong>Hafiz Muhammad Adnan Tariq</strong></p>
+
+  <p class="emoji">🔭 <strong>Currently working on:</strong> Metagenomics and AMR</p>
+  <p class="emoji">🌱 <strong>Currently learning:</strong> Advanced Machine Learning</p>
+  <p class="emoji">📫 <strong>Reach me at:</strong> <a href="mailto:adnantariq6400@gmail.com">adnantariq6400@gmail.com</a></p>
+</body>
+</html>
