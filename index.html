@@ -1,87 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Hafiz Muhammad Adnan Tariq</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
   <style>
+    :root {
+      --primary-color: #0077b6;
+      --bg-color: #f9f9f9;
+      --text-color: #333;
+      --card-bg: white;
+      --border-radius: 12px;
+    }
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
     }
-    header {
-      background-color: #0077b6;
-      color: white;
+    .container {
+      display: flex;
+      flex-direction: row;
+      max-width: 1200px;
+      margin: auto;
       padding: 2rem;
-      text-align: center;
+      gap: 2rem;
     }
-    header img {
+    .sidebar {
+      width: 300px;
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: var(--border-radius);
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+    .sidebar img {
       width: 150px;
       height: 150px;
       border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+    .sidebar h1 {
+      margin: 0.5rem 0;
+      font-size: 1.5rem;
+    }
+    .sidebar p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
       margin-top: 1rem;
     }
-    main {
-      padding: 2rem;
-      max-width: 800px;
-      margin: 0 auto;
+    .sidebar ul li {
+      margin: 0.5rem 0;
     }
-    h1, h2 {
-      margin-bottom: 0.5rem;
-    }
-    ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-    a {
-      color: #0077b6;
+    .sidebar a {
+      color: var(--primary-color);
       text-decoration: none;
+      font-weight: 500;
     }
-    a:hover {
+    .sidebar a:hover {
       text-decoration: underline;
+    }
+
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .section {
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: var(--border-radius);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+    .section h2 {
+      margin-bottom: 1rem;
+      color: var(--primary-color);
     }
     footer {
       text-align: center;
       padding: 1rem;
-      background-color: #eee;
+      font-size: 0.85rem;
+      color: #777;
       margin-top: 2rem;
+    }
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+        padding: 1rem;
+      }
+      .sidebar {
+        width: 100%;
+      }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Hafiz Muhammad Adnan Tariq</h1>
-    <p>Bioinformatics | Metagenomics | Machine Learning</p>
-    <img src="assets/images/avatar.png" alt="Hafiz Muhammad Adnan Tariq">
-  </header>
-
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        I am a Bioinformatics graduate with research experience in host-microbiome interactions, metagenomics, and machine learning. 
-        I have published work in this domain and am passionate about computational biology and medical informatics.
-      </p>
-    </section>
-
-    <section id="contact" style="margin-top: 2rem;">
-      <h2>Connect with Me</h2>
+  <div class="container">
+    <aside class="sidebar">
+      <img src="assets/images/avatar.png" alt="Hafiz Muhammad Adnan Tariq" />
+      <h1>Hafiz Muhammad Adnan Tariq</h1>
+      <p>Bioinformatics | Metagenomics | Machine Learning</p>
       <ul>
-        <li><strong>GitHub:</strong> <a href="https://github.com/adnantariq6400" target="_blank">github.com/adnantariq6400</a></li>
-        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/adnan-tariq-9487a1169" target="_blank">linkedin.com/in/adnan-tariq-9487a1169</a></li>
-        <li><strong>ORCID:</strong> <a href="https://orcid.org/0009-0008-8499-8803" target="_blank">0009-0008-8499-8803</a></li>
-        <li><strong>Email:</strong> <a href="mailto:adnantariq2525@gmail.com">adnantariq2525@gmail.com</a></li>
+        <li><a href="https://github.com/adnantariq6400" target="_blank">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/adnan-tariq-9487a1169" target="_blank">LinkedIn</a></li>
+        <li><a href="https://orcid.org/0009-0008-8499-8803" target="_blank">ORCID</a></li>
+        <li><a href="mailto:adnantariq2525@gmail.com">Email</a></li>
       </ul>
-    </section>
-  </main>
+    </aside>
+
+    <main class="content">
+      <section class="section" id="about">
+        <h2>About Me</h2>
+        <p>I am a Bioinformatics graduate with research experience in host-microbiome interactions, metagenomics, and machine learning. I have published work in this domain and am passionate about computational biology, AMR risk modeling, and medical informatics.</p>
+      </section>
+
+      <section class="section" id="experience">
+        <h2>Experience</h2>
+        <p><strong>Research Assistant – COMSATS University</strong><br>
+        Worked on T2D host-microbiome interactions using metagenomic datasets. Built pipelines for taxonomic and metabolic profiling using machine learning.</p>
+      </section>
+
+      <section class="section" id="publications">
+        <h2>Publications</h2>
+        <ul>
+          <li>Author et al. (2023). <em>Title of Your Research Paper</em>. Journal Name. [Link]</li>
+          <li>Author et al. (2024). <em>Title of Another Work</em>. Conference Name. [Link]</li>
+        </ul>
+      </section>
+
+      <section class="section" id="projects">
+        <h2>Projects</h2>
+        <p><strong>Digital Twin-based AMR Modeling</strong> – Simulating synthetic populations and evaluating risk scenarios for antimicrobial resistance.</p>
+      </section>
+    </main>
+  </div>
 
   <footer>
-    <p>&copy; 2025 Hafiz Muhammad Adnan Tariq. All rights reserved.</p>
+    &copy; 2025 Hafiz Muhammad Adnan Tariq. All rights reserved.
   </footer>
 
 </body>
