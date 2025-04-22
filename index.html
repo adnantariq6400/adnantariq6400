@@ -3,23 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hafiz Muhammad Adnan Tariq | Bioinformatician</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <title>Hafiz Muhammad Adnan Tariq | Bioinformatician & NGS Specialist</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: #3b82f6;
-            --primary-dark: #2563eb;
-            --text: #1f2937;
-            --text-light: #6b7280;
-            --bg: #ffffff;
-            --card-bg: #f9fafb;
-            --border: #e5e7eb;
-            --dark-text: #f3f4f6;
-            --dark-text-light: #d1d5db;
-            --dark-bg: #111827;
-            --dark-card-bg: #1f2937;
-            --dark-border: #374151;
+            --primary: #4361ee;
+            --primary-light: #4895ef;
+            --primary-dark: #3a0ca3;
+            --secondary: #7209b7;
+            --accent: #f72585;
+            --text: #2b2d42;
+            --text-light: #8d99ae;
+            --bg: #f8f9fa;
+            --card-bg: #ffffff;
+            --border: #e9ecef;
+            --dark-text: #edf2f4;
+            --dark-text-light: #adb5bd;
+            --dark-bg: #121212;
+            --dark-card-bg: #1e1e1e;
+            --dark-border: #333333;
+            --gradient: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
         }
 
         * {
@@ -29,16 +33,23 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
             color: var(--text);
             background-color: var(--bg);
-            transition: all 0.3s ease;
+            transition: all 0.4s ease;
+            scroll-behavior: smooth;
         }
 
         body.dark {
             color: var(--dark-text);
             background-color: var(--dark-bg);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.3;
         }
 
         .container {
@@ -47,28 +58,99 @@
             padding: 0 2rem;
         }
 
+        section {
+            padding: 6rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+            color: var(--primary);
+        }
+
+        body.dark .section-title {
+            color: var(--primary-light);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--gradient);
+            border-radius: 2px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.8rem 1.8rem;
+            background: var(--gradient);
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(67, 97, 238, 0.3);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(67, 97, 238, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            box-shadow: none;
+        }
+
+        body.dark .btn-outline {
+            color: var(--primary-light);
+            border-color: var(--primary-light);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        body.dark .btn-outline:hover {
+            background: var(--primary-light);
+        }
+
         /* Header */
         header {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            background-color: var(--bg);
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            z-index: 100;
-            transition: all 0.3s ease;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: all 0.4s ease;
+            backdrop-filter: blur(10px);
         }
 
         body.dark header {
-            background-color: var(--dark-card-bg);
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+            background-color: rgba(30, 30, 30, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
         }
 
         .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.5rem 0;
+            padding: 1.2rem 0;
         }
 
         .logo {
@@ -76,6 +158,14 @@
             font-weight: 700;
             color: var(--primary);
             text-decoration: none;
+            font-family: 'Playfair Display', serif;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo i {
+            font-size: 1.2rem;
         }
 
         .nav-links {
@@ -87,8 +177,9 @@
             color: var(--text);
             text-decoration: none;
             font-weight: 500;
-            transition: color 0.3s;
+            transition: all 0.3s;
             position: relative;
+            font-size: 1rem;
         }
 
         body.dark .nav-link {
@@ -106,7 +197,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background-color: var(--primary);
+            background: var(--gradient);
             transition: width 0.3s;
         }
 
@@ -121,50 +212,115 @@
             cursor: pointer;
             font-size: 1.2rem;
             transition: all 0.3s;
+            margin-left: 1.5rem;
         }
 
         body.dark .theme-toggle {
             color: var(--dark-text);
         }
 
-        /* Hero Section */
-        .hero {
-            padding: 10rem 0 5rem;
-            text-align: center;
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0) 100%);
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text);
+            font-size: 1.5rem;
+            cursor: pointer;
         }
 
-        body.dark .hero {
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0) 100%);
+        body.dark .mobile-menu-btn {
+            color: var(--dark-text);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 12rem 0 6rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(67, 97, 238, 0.05) 0%, rgba(114, 9, 183, 0.05) 100%);
+            z-index: -1;
+        }
+
+        body.dark .hero::before {
+            background: linear-gradient(135deg, rgba(67, 97, 238, 0.1) 0%, rgba(114, 9, 183, 0.1) 100%);
+        }
+
+        .profile-img-container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 2rem;
         }
 
         .profile-img {
-            width: 180px;
-            height: 180px;
+            width: 100%;
+            height: 100%;
             border-radius: 50%;
             object-fit: cover;
-            border: 4px solid var(--primary);
-            margin: 0 auto 1.5rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 5px solid var(--primary);
+            box-shadow: 0 10px 30px rgba(67, 97, 238, 0.3);
+            transition: all 0.4s ease;
+        }
+
+        .profile-img-container:hover .profile-img {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(67, 97, 238, 0.4);
+        }
+
+        .profile-img-container::after {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border-radius: 50%;
+            border: 2px dashed var(--primary);
+            animation: rotate 20s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
         .hero h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 0.5rem;
-            font-weight: 700;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
         }
 
         .hero h2 {
-            font-size: 1.5rem;
-            color: var(--primary);
+            font-size: 1.8rem;
+            color: var(--text);
             margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        body.dark .hero h2 {
+            color: var(--dark-text);
         }
 
         .hero p {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             color: var(--text-light);
             max-width: 700px;
-            margin: 0 auto 2rem;
+            margin: 0 auto 2.5rem;
         }
 
         body.dark .hero p {
@@ -175,72 +331,197 @@
             display: flex;
             justify-content: center;
             gap: 1.5rem;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
         }
 
         .social-link {
-            color: var(--text);
-            font-size: 1.5rem;
-            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: var(--card-bg);
+            color: var(--primary);
+            font-size: 1.3rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         body.dark .social-link {
-            color: var(--dark-text);
+            background-color: var(--dark-card-bg);
+            color: var(--primary-light);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
         .social-link:hover {
-            color: var(--primary);
-        }
-
-        /* Sections */
-        section {
-            padding: 5rem 0;
-        }
-
-        .section-title {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 2rem;
-            text-align: center;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background-color: var(--primary);
-            border-radius: 2px;
+            background: var(--gradient);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(67, 97, 238, 0.3);
         }
 
         /* About Section */
+        .about {
+            position: relative;
+        }
+
         .about-content {
-            max-width: 800px;
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            max-width: 1100px;
             margin: 0 auto;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-image {
+            flex: 1;
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .about-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+        }
+
+        .about-image:hover img {
+            transform: scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        body.dark .about-image img {
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 10px;
             text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+        }
+
+        body.dark .stat-item {
+            background-color: var(--dark-card-bg);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        body.dark .stat-label {
+            color: var(--dark-text-light);
         }
 
         /* Education Section */
-        .education-item {
+        .education {
             background-color: var(--card-bg);
+        }
+
+        body.dark .education {
+            background-color: var(--dark-card-bg);
+        }
+
+        .education-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .education-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background-color: var(--primary);
+            opacity: 0.3;
+        }
+
+        .education-item {
+            position: relative;
             padding: 2rem;
-            border-radius: 0.5rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            background-color: var(--bg);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
         }
 
         body.dark .education-item {
-            background-color: var(--dark-card-bg);
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+            background-color: var(--dark-bg);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .education-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .education-item:nth-child(odd) {
+            margin-right: 50%;
+            text-align: right;
+        }
+
+        .education-item:nth-child(even) {
+            margin-left: 50%;
+        }
+
+        .education-item::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--gradient);
+            transform: translateY(-50%);
+        }
+
+        .education-item:nth-child(odd)::before {
+            right: -60px;
+        }
+
+        .education-item:nth-child(even)::before {
+            left: -60px;
         }
 
         .education-item h3 {
-            font-size: 1.25rem;
+            font-size: 1.4rem;
             margin-bottom: 0.5rem;
+            color: var(--primary);
         }
 
         .education-item p {
@@ -253,42 +534,64 @@
         }
 
         .education-date {
-            color: var(--primary);
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50px;
+            font-size: 0.8rem;
             font-weight: 500;
+            margin-bottom: 1rem;
         }
 
         /* Experience Section */
         .experience-item {
             background-color: var(--card-bg);
-            padding: 2rem;
-            border-radius: 0.5rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            padding: 2.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+            border-left: 4px solid var(--primary);
         }
 
         body.dark .experience-item {
             background-color: var(--dark-card-bg);
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .experience-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
 
         .experience-item h3 {
-            font-size: 1.25rem;
+            font-size: 1.4rem;
             margin-bottom: 0.5rem;
         }
 
         .experience-org {
-            font-weight: 500;
+            font-weight: 600;
             color: var(--primary);
             margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
         .experience-date {
-            color: var(--text-light);
-            margin-bottom: 1rem;
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            background-color: rgba(67, 97, 238, 0.1);
+            color: var(--primary);
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
         }
 
         body.dark .experience-date {
-            color: var(--dark-text-light);
+            background-color: rgba(67, 97, 238, 0.2);
         }
 
         .experience-item ul {
@@ -296,42 +599,75 @@
         }
 
         .experience-item li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
+            position: relative;
+            list-style-type: none;
+        }
+
+        .experience-item li::before {
+            content: '▹';
+            position: absolute;
+            left: -1.5rem;
+            color: var(--primary);
         }
 
         /* Publications Section */
-        .publication-item {
+        .publications {
             background-color: var(--card-bg);
-            padding: 2rem;
-            border-radius: 0.5rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        body.dark .publications {
+            background-color: var(--dark-card-bg);
+        }
+
+        .publication-item {
+            background-color: var(--bg);
+            padding: 2.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
         }
 
         body.dark .publication-item {
-            background-color: var(--dark-card-bg);
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+            background-color: var(--dark-bg);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .publication-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
 
         .publication-item h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
         }
 
         .publication-authors {
             font-style: italic;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-light);
+        }
+
+        body.dark .publication-authors {
+            color: var(--dark-text-light);
         }
 
         .publication-journal {
-            font-weight: 500;
-            margin-bottom: 0.5rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            color: var(--primary);
         }
 
         .publication-doi {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
             color: var(--primary);
             text-decoration: none;
+            font-weight: 500;
+            margin-right: 1.5rem;
         }
 
         .publication-doi:hover {
@@ -339,6 +675,7 @@
         }
 
         .publication-date {
+            display: inline-block;
             color: var(--text-light);
         }
 
@@ -349,28 +686,42 @@
         /* Skills Section */
         .skills-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 1.5rem;
-            max-width: 800px;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
         .skill-category {
             background-color: var(--card-bg);
-            padding: 1.5rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+            border-top: 3px solid var(--primary);
         }
 
         body.dark .skill-category {
             background-color: var(--dark-card-bg);
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
 
         .skill-category h3 {
-            font-size: 1.125rem;
-            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
             color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .skill-category h3 i {
+            font-size: 1.2rem;
         }
 
         .skill-category ul {
@@ -378,92 +729,223 @@
         }
 
         .skill-category li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
             display: flex;
             align-items: center;
+            gap: 0.8rem;
         }
 
-        .skill-category li::before {
-            content: '•';
+        .skill-category li i {
             color: var(--primary);
-            margin-right: 0.5rem;
+            font-size: 0.8rem;
         }
 
-        /* Download Button */
+        /* Download Section */
         .download-section {
             text-align: center;
-            margin: 3rem 0;
-        }
-
-        .download-btn {
-            display: inline-flex;
-            align-items: center;
-            padding: 0.75rem 1.5rem;
-            background-color: var(--primary);
-            color: white;
-            border-radius: 0.375rem;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s;
-        }
-
-        .download-btn:hover {
-            background-color: var(--primary-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .download-btn i {
-            margin-right: 0.5rem;
+            margin: 4rem 0;
         }
 
         /* Footer */
         footer {
-            background-color: var(--card-bg);
-            padding: 2rem 0;
+            background: var(--gradient);
+            padding: 4rem 0;
             text-align: center;
+            color: white;
         }
 
-        body.dark footer {
-            background-color: var(--dark-card-bg);
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
         }
 
-        footer p {
-            color: var(--text-light);
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            display: inline-block;
         }
 
-        body.dark footer p {
-            color: var(--dark-text-light);
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-link {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .footer-link:hover {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+
+        .footer-social-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--gradient);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 5px 20px rgba(67, 97, 238, 0.4);
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 999;
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(67, 97, 238, 0.5);
         }
 
         /* Responsive */
-        @media (max-width: 768px) {
-            .header-container {
+        @media (max-width: 992px) {
+            .about-content {
                 flex-direction: column;
-                padding: 1rem 0;
+                gap: 2rem;
             }
-
-            .nav-links {
-                margin-top: 1rem;
-                gap: 1rem;
+            
+            .about-image {
+                order: -1;
             }
+            
+            .education-item:nth-child(odd),
+            .education-item:nth-child(even) {
+                margin-right: 0;
+                margin-left: 0;
+                text-align: left;
+            }
+            
+            .education-container::before {
+                left: 30px;
+            }
+            
+            .education-item::before {
+                left: 20px;
+                right: auto;
+            }
+        }
 
+        @media (max-width: 768px) {
+            section {
+                padding: 4rem 0;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+                margin-bottom: 2.5rem;
+            }
+            
             .hero {
-                padding: 8rem 0 3rem;
+                padding: 10rem 0 4rem;
             }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: var(--card-bg);
+                flex-direction: column;
+                align-items: center;
+                padding: 2rem 0;
+                gap: 1.5rem;
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+                transform: translateY(-150%);
+                transition: transform 0.4s ease;
+                z-index: 999;
+            }
+            
+            body.dark .nav-links {
+                background-color: var(--dark-card-bg);
+            }
+            
+            .nav-links.active {
+                transform: translateY(0);
+            }
+            
+            .about-stats {
+                grid-template-columns: 1fr;
+            }
+        }
 
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+            
             .hero h1 {
                 font-size: 2rem;
             }
-
+            
             .hero h2 {
-                font-size: 1.25rem;
+                font-size: 1.3rem;
             }
-
-            section {
-                padding: 3rem 0;
+            
+            .profile-img-container {
+                width: 160px;
+                height: 160px;
             }
-
+            
             .skills-container {
                 grid-template-columns: 1fr;
             }
@@ -474,16 +956,21 @@
     <!-- Header -->
     <header>
         <div class="container header-container">
-            <a href="#" class="logo">Hafiz Muhammad Adnan Tariq</a>
+            <a href="#" class="logo">
+                <i class="fas fa-dna"></i> Adnan Tariq
+            </a>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="#about" class="nav-link">Bio</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
                     <li><a href="#education" class="nav-link">Education</a></li>
                     <li><a href="#experience" class="nav-link">Experience</a></li>
                     <li><a href="#publications" class="nav-link">Publications</a></li>
                     <li><a href="#skills" class="nav-link">Skills</a></li>
                 </ul>
             </nav>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
             <button class="theme-toggle" aria-label="Toggle dark mode">
                 <i class="fas fa-moon"></i>
             </button>
@@ -493,24 +980,29 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <img src="assets/images/avatar.png" alt="Hafiz Muhammad Adnan Tariq" class="profile-img">
+            <div class="profile-img-container">
+                <img src="/assets/images/avatar.png" alt="Hafiz Muhammad Adnan Tariq" class="profile-img">
+            </div>
             <h1>Hafiz Muhammad Adnan Tariq</h1>
-            <h2>Bioinformatician/NGS Data Analyst</h2>
-            <p>National University of Sciences and Technology</p>
+            <h2>Bioinformatician & NGS Data Specialist</h2>
+            <p>Transforming complex biological data into meaningful insights through computational analysis</p>
             <div class="social-links">
-                <a href="https://github.com/adnantariq6400" target="_blank" class="social-link">
+                <a href="https://github.com/adnantariq6400" target="_blank" class="social-link" aria-label="GitHub">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/adnan-tariq-9487a1169" target="_blank" class="social-link">
-                    <i class="fab fa-linkedin"></i>
+                <a href="https://www.linkedin.com/in/adnan-tariq-9487a1169" target="_blank" class="social-link" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="https://orcid.org/0009-0008-8499-8803" target="_blank" class="social-link">
+                <a href="https://orcid.org/0009-0008-8499-8803" target="_blank" class="social-link" aria-label="ORCID">
                     <i class="fab fa-orcid"></i>
                 </a>
-                <a href="mailto:adnantariq2525@gmail.com" class="social-link">
+                <a href="mailto:adnantariq2525@gmail.com" class="social-link" aria-label="Email">
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
+            <a href="#about" class="btn-outline">
+                <i class="fas fa-chevron-down"></i> Explore My Work
+            </a>
         </div>
     </section>
 
@@ -519,11 +1011,34 @@
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
-                <p>
-                    Bioinformatician and NGS Data Analyst with expertise in metagenomics, machine learning, and computational biology. 
-                    My research focuses on host-microbiome interactions, antimicrobial resistance, and developing computational 
-                    pipelines for large-scale genomic data analysis.
-                </p>
+                <div class="about-text">
+                    <p>
+                        I am a passionate Bioinformatician and NGS Data Analyst with expertise in metagenomics, machine learning, and computational biology. 
+                        My research focuses on unraveling the complex interactions between hosts and their microbiomes, understanding antimicrobial resistance patterns, 
+                        and developing innovative computational pipelines for large-scale genomic data analysis.
+                    </p>
+                    <p>
+                        With a strong foundation in both biological sciences and computational methods, I bridge the gap between raw sequencing data and meaningful 
+                        biological insights. My work contributes to advancing personalized medicine and our understanding of microbial ecosystems.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">5+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">2</div>
+                            <div class="stat-label">Publications</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1581093450021-4a7360e9a1e9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Bioinformatics Workstation">
+                </div>
             </div>
         </div>
     </section>
@@ -532,15 +1047,19 @@
     <section id="education" class="education">
         <div class="container">
             <h2 class="section-title">Education</h2>
-            <div class="education-item">
-                <h3>MS Bioinformatics</h3>
-                <p>National University of Sciences and Technology (NUST)</p>
-                <p class="education-date">09/2022 - 08/2024</p>
-            </div>
-            <div class="education-item">
-                <h3>BS Bioinformatics</h3>
-                <p>Quaid-i-Azam University (QAU)</p>
-                <p class="education-date">09/2017 - 09/2021</p>
+            <div class="education-container">
+                <div class="education-item">
+                    <h3>MS Bioinformatics</h3>
+                    <p>National University of Sciences and Technology (NUST)</p>
+                    <span class="education-date">2022 - 2024</span>
+                    <p>Specialized in metagenomics and machine learning applications in bioinformatics</p>
+                </div>
+                <div class="education-item">
+                    <h3>BS Bioinformatics</h3>
+                    <p>Quaid-i-Azam University (QAU)</p>
+                    <span class="education-date">2017 - 2021</span>
+                    <p>Graduated with honors, focusing on computational biology and genomics</p>
+                </div>
             </div>
         </div>
     </section>
@@ -551,27 +1070,35 @@
             <h2 class="section-title">Research Experience</h2>
             <div class="experience-item">
                 <h3>Identification of Key Taxonomic and Metabolic Players in the Gut Metagenome of T2D Patients</h3>
-                <p class="experience-org">NUST University (MS-Thesis Project)</p>
-                <p class="experience-date">07/2023 - 08/2024</p>
+                <p class="experience-org"><i class="fas fa-university"></i> NUST University (MS-Thesis Project)</p>
+                <span class="experience-date">Jul 2023 - Aug 2024</span>
                 <ul>
-                    <li>Identified exclusive CAZyme proteins, and Taxa associated with T2D patients</li>
-                    <li>Employed NGS Techniques, Metagenome Analysis, Linux & Bash Scripting, and Gene Family Prediction</li>
+                    <li>Identified exclusive CAZyme proteins and taxa associated with Type 2 Diabetes patients through comprehensive metagenomic analysis</li>
+                    <li>Developed and implemented custom bioinformatics pipelines for large-scale metagenomic data processing</li>
+                    <li>Employed advanced NGS techniques, Linux/Bash scripting, and gene family prediction tools</li>
+                    <li>Utilized statistical and machine learning approaches to identify significant microbial biomarkers</li>
                 </ul>
             </div>
             <div class="experience-item">
                 <h3>Machine learning identifies microbial biomarkers of environmental antibiotic exposure in zebrafish gut metagenomes</h3>
-                <p class="experience-org">Shanghai Jiao Tong University, China</p>
-                <p class="experience-date">08/2023 - 06/2024</p>
+                <p class="experience-org"><i class="fas fa-university"></i> Shanghai Jiao Tong University, China</p>
+                <span class="experience-date">Aug 2023 - Jun 2024</span>
                 <ul>
-                    <li>Metagenomics Analysis, Machine Learning, and R to identify the environmental antimicrobial resistance genes</li>
+                    <li>Conducted metagenomics analysis to identify environmental antimicrobial resistance genes</li>
+                    <li>Developed machine learning models to predict antibiotic exposure based on microbial profiles</li>
+                    <li>Implemented analysis pipelines in R and Python for high-throughput data processing</li>
+                    <li>Collaborated with international team to interpret findings and prepare publications</li>
                 </ul>
             </div>
             <div class="experience-item">
                 <h3>Gut Microbial Strains - Non-Small Cell Lung Cancer Treatment: Decoding the Connection</h3>
-                <p class="experience-org">NUST University</p>
-                <p class="experience-date">05/2023 - 08/2024</p>
+                <p class="experience-org"><i class="fas fa-university"></i> NUST University</p>
+                <span class="experience-date">May 2023 - Aug 2024</span>
                 <ul>
-                    <li>Developed statistical and machine learning models to associate variants and strains with treatment responses</li>
+                    <li>Analyzed gut microbiome data from NSCLC patients undergoing immunotherapy</li>
+                    <li>Developed statistical and machine learning models to associate microbial variants and strains with treatment responses</li>
+                    <li>Identified potential microbial biomarkers for treatment efficacy prediction</li>
+                    <li>Contributed to manuscript preparation and data visualization</li>
                 </ul>
             </div>
         </div>
@@ -585,13 +1112,23 @@
                 <h3>Exploring the Impact of Type 2 Diabetes and Glucose-Lowering Drugs on Gut Microbiome Dynamics</h3>
                 <p class="publication-authors">Tariq, H.M.A., Khan, N.Y., Manzoor, H., & Kayani, M.U.R.</p>
                 <p class="publication-journal">Springer Nature Discover Medicine</p>
-                <p class="publication-date">02/2025 | DOI: <a href="https://doi.org/10.1007/s44337-025-00241-9" target="_blank" class="publication-doi">10.1007/s44337-025-00241-9</a></p>
+                <p>
+                    <a href="https://doi.org/10.1007/s44337-025-00241-9" target="_blank" class="publication-doi">
+                        <i class="fas fa-link"></i> DOI: 10.1007/s44337-025-00241-9
+                    </a>
+                    <span class="publication-date">February 2025</span>
+                </p>
             </div>
             <div class="publication-item">
                 <h3>Prioritizing gut microbial SNPs linked to immunotherapy outcomes in NSCLC patients by integrative bioinformatics analysis</h3>
                 <p class="publication-authors">Raziq, M.F., Tariq, H.M.A., Khan, N., Manzoor, H., Rafiq, M., Rasool, S., Kayani, M.U.R., & Huang, L.</p>
                 <p class="publication-journal">Journal of Translational Medicine</p>
-                <p class="publication-date">03/2025 | DOI: <a href="https://doi.org/10.1186/s12967-025-06370-0" target="_blank" class="publication-doi">10.1186/s12967-025-06370-0</a></p>
+                <p>
+                    <a href="https://doi.org/10.1186/s12967-025-06370-0" target="_blank" class="publication-doi">
+                        <i class="fas fa-link"></i> DOI: 10.1186/s12967-025-06370-0
+                    </a>
+                    <span class="publication-date">March 2025</span>
+                </p>
             </div>
         </div>
     </section>
@@ -602,57 +1139,88 @@
             <h2 class="section-title">Technical Skills</h2>
             <div class="skills-container">
                 <div class="skill-category">
-                    <h3>NGS & Omics Analysis</h3>
+                    <h3><i class="fas fa-dna"></i> NGS & Omics Analysis</h3>
                     <ul>
-                        <li>MetaPhlAn</li>
-                        <li>HUMAnN</li>
-                        <li>Single-cell RNA-seq</li>
-                        <li>Functional Profiling</li>
+                        <li><i class="fas fa-check"></i> MetaPhlAn</li>
+                        <li><i class="fas fa-check"></i> HUMAnN</li>
+                        <li><i class="fas fa-check"></i> Single-cell RNA-seq</li>
+                        <li><i class="fas fa-check"></i> Functional Profiling</li>
+                        <li><i class="fas fa-check"></i> Metagenomic Assembly</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>Big Data & Cloud Computing</h3>
+                    <h3><i class="fas fa-server"></i> Big Data & Cloud Computing</h3>
                     <ul>
-                        <li>HPC</li>
-                        <li>AWS</li>
-                        <li>Multi-omics data integration</li>
+                        <li><i class="fas fa-check"></i> High Performance Computing</li>
+                        <li><i class="fas fa-check"></i> AWS Cloud Services</li>
+                        <li><i class="fas fa-check"></i> Multi-omics Integration</li>
+                        <li><i class="fas fa-check"></i> Distributed Computing</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>Programming & Data Analysis</h3>
+                    <h3><i class="fas fa-code"></i> Programming & Data Analysis</h3>
                     <ul>
-                        <li>Python</li>
-                        <li>R</li>
-                        <li>Bash Scripting</li>
-                        <li>Linux</li>
+                        <li><i class="fas fa-check"></i> Python (Pandas, NumPy)</li>
+                        <li><i class="fas fa-check"></i> R (Bioconductor, ggplot2)</li>
+                        <li><i class="fas fa-check"></i> Bash Scripting</li>
+                        <li><i class="fas fa-check"></i> Linux/Unix Environment</li>
+                        <li><i class="fas fa-check"></i> SQL Databases</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>Machine Learning & AI</h3>
+                    <h3><i class="fas fa-robot"></i> Machine Learning & AI</h3>
                     <ul>
-                        <li>scikit-learn</li>
-                        <li>TensorFlow</li>
-                        <li>Statistical modeling</li>
-                        <li>LLMs</li>
+                        <li><i class="fas fa-check"></i> scikit-learn</li>
+                        <li><i class="fas fa-check"></i> TensorFlow/Keras</li>
+                        <li><i class="fas fa-check"></i> Statistical Modeling</li>
+                        <li><i class="fas fa-check"></i> Large Language Models</li>
+                        <li><i class="fas fa-check"></i> Dimensionality Reduction</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Download CV -->
+    <!-- Download Section -->
     <div class="download-section">
-        <a href="/Resume_Adnan.pdf" class="download-btn">
-            <i class="fas fa-download"></i> Download CV
+        <a href="/Resume_Adnan.pdf" class="btn" download>
+            <i class="fas fa-download"></i> Download Full CV
         </a>
     </div>
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>© 2024 Hafiz Muhammad Adnan Tariq. All rights reserved.</p>
+        <div class="container footer-content">
+            <a href="#" class="footer-logo">Hafiz Muhammad Adnan Tariq</a>
+            <div class="footer-links">
+                <a href="#about" class="footer-link">About</a>
+                <a href="#education" class="footer-link">Education</a>
+                <a href="#experience" class="footer-link">Experience</a>
+                <a href="#publications" class="footer-link">Publications</a>
+                <a href="#skills" class="footer-link">Skills</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://github.com/adnantariq6400" target="_blank" class="footer-social-link" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/adnan-tariq-9487a1169" target="_blank" class="footer-social-link" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://orcid.org/0009-0008-8499-8803" target="_blank" class="footer-social-link" aria-label="ORCID">
+                    <i class="fab fa-orcid"></i>
+                </a>
+                <a href="mailto:adnantariq2525@gmail.com" class="footer-social-link" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <p class="copyright">© 2024 Hafiz Muhammad Adnan Tariq. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Back to top button -->
+    <div class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
 
     <script>
         // Dark mode toggle
@@ -681,6 +1249,24 @@
             }
         });
         
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
@@ -691,12 +1277,55 @@
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     window.scrollTo({
-                        top: targetElement.offsetTop - 100,
+                        top: targetElement.offsetTop - 80,
                         behavior: 'smooth'
                     });
                 }
             });
         });
+        
+        // Back to top button
+        const backToTopBtn = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('active');
+            } else {
+                backToTopBtn.classList.remove('active');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Animation on scroll
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.education-item, .experience-item, .publication-item, .skill-category');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        };
+        
+        // Initialize elements with opacity 0 and slight offset
+        document.querySelectorAll('.education-item, .experience-item, .publication-item, .skill-category').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(20px)';
+            element.style.transition = 'all 0.6s ease';
+        });
+        
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
     </script>
 </body>
 </html>
