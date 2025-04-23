@@ -5,7 +5,7 @@ body {
   padding: 0;
   line-height: 1.6;
   background: linear-gradient(135deg, #1e1f26, #3a3f44, #2a363b); /* Fresh green tones */
-  color: #333;
+  color: #f4f4f4;
 }
 
 .container {
@@ -199,7 +199,7 @@ ul li {
 
 /* Footer */
 footer {
-  background-color: #0077b6;
+  background-color: #f1f1f1;
   color: #000;
   text-align: center;
   padding: 15px 0;
