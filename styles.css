@@ -1,0 +1,119 @@
+/* Base Styles for Body and Layout */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header and Navigation Styles */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+header h1 {
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+/* Section Styles */
+section {
+    padding: 40px 0;
+}
+
+/* Experience Page Specific Styles */
+.experience-list ul {
+    padding-left: 20px;
+}
+
+.experience-list li {
+    margin-bottom: 20px;
+}
+
+.experience-list h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.experience-list p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.experience-list ul li ul {
+    padding-left: 20px;
+}
+
+.experience-list ul li ul li {
+    font-size: 1rem;
+    color: #555;
+}
+
+.experience-list h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Projects Page Specific Styles */
+.projects-list ul {
+    padding-left: 20px;
+}
+
+.projects-list li {
+    margin-bottom: 20px;
+}
+
+.projects-list h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.projects-list p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.projects-list ul li ul {
+    padding-left: 20px;
+}
+
+.projects-list ul li ul li {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
