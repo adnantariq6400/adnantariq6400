@@ -40,7 +40,47 @@
             padding: 0;
             box-sizing: border-box;
         }
-
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    particlesJS('particles-js', {
+      "particles": {
+        "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": ["#4361ee", "#7209b7", "#f72585"] },
+        "shape": { "type": "circle" },
+        "opacity": {
+          "value": 0.3,
+          "random": true,
+          "anim": { "enable": true, "speed": 1, "opacity_min": 0.1 }
+        },
+        "size": { "value": 3, "random": true },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "var(--primary)",
+          "opacity": 0.2,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 1,
+          "direction": "none",
+          "random": true,
+          "straight": false,
+          "out_mode": "out"
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" },
+          "onclick": { "enable": true, "mode": "push" }
+        }
+      }
+    });
+  });
+</script>
+        
         body {
             font-family: 'Poppins', sans-serif;
             line-height: 1.7;
@@ -49,7 +89,20 @@
             transition: all 0.4s ease;
             scroll-behavior: smooth;
         }
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Ensures content stays on top */
+  opacity: 0.5;
+}
 
+body.dark #particles-js {
+  opacity: 0.8;
+}
+          
         body.dark {
             color: var(--dark-text);
             background-color: var(--dark-bg);
