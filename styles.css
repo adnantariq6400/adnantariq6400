@@ -287,5 +287,20 @@ nav ul li a:hover {
   transform: scale(1.05);
   text-decoration: none;
 }
+/* Fix 'Contact' link styling */
+nav ul li a[href="#contact"],
+nav ul li a[href="#contact"]:visited,
+nav ul li a[href="#contact"]:focus {
+  color: #000 !important;
+  text-decoration: none !important;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+nav ul li a[href="#contact"]:hover {
+  color: #000 !important;
+  text-decoration: none !important;
+  transform: scale(1.05);
+}
 
 
