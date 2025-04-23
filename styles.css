@@ -23,9 +23,9 @@ header {
 }
 
 header h1 {
+  text-align: left;
   margin: 0;
   font-size: 2rem;
-  text-align: left;
 }
 
 nav ul {
