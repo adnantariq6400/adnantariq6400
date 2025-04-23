@@ -8,106 +8,136 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-  /* Primary Colors (Now More Vibrant) */
-  --primary: #4361ee;      /* Royal Blue */
-  --primary-light: #4895ef; /* Lighter Blue */
-  --primary-dark: #3a0ca3;  /* Deep Purple-Blue */
-  --secondary: #7209b7;    /* Purple */
-  --accent: #f72585;       /* Pink */
+            /* Primary Colors (Now More Vibrant) */
+            --primary: #4361ee;      /* Royal Blue */
+            --primary-light: #4895ef; /* Lighter Blue */
+            --primary-dark: #3a0ca3;  /* Deep Purple-Blue */
+            --secondary: #7209b7;    /* Purple */
+            --accent: #f72585;       /* Pink */
 
-  /* Light Mode Colors (Warmer & Softer) */
-  --text: #2b2d42;         /* Dark Navy (Better Contrast) */
-  --text-light: #5c677d;   /* Soft Gray-Blue (Easier on Eyes) */
-  --bg: #f8f9fa;           /* Off-White (Not Pure #FFF) */
-  --card-bg: #ffffff;      /* Pure White Cards (For Contrast) */
-  --border: #e9ecef;       /* Light Gray Border */
-  --highlight: #f8f4ff;    /* Soft Purple Tint for Sections */
+            /* Light Mode Colors (Warmer & Softer) */
+            --text: #2b2d42;         /* Dark Navy (Better Contrast) */
+            --text-light: #5c677d;   /* Soft Gray-Blue (Easier on Eyes) */
+            --bg: #f8f9fa;           /* Off-White (Not Pure #FFF) */
+            --card-bg: rgba(255, 255, 255, 0.9);      /* Pure White Cards (For Contrast) */
+            --border: #e9ecef;       /* Light Gray Border */
+            --highlight: #f8f4ff;    /* Soft Purple Tint for Sections */
 
-  /* Dark Mode Colors (Same as Before) */
-  --dark-text: #edf2f4;
-  --dark-text-light: #adb5bd;
-  --dark-bg: #121212;
-  --dark-card-bg: #1e1e1e;
-  --dark-border: #333333;
+            /* Dark Mode Colors (Same as Before) */
+            --dark-text: #edf2f4;
+            --dark-text-light: #adb5bd;
+            --dark-bg: #121212;
+            --dark-card-bg: rgba(30, 30, 30, 0.9);
+            --dark-border: #333333;
 
-  /* Gradients */
-  --gradient: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-  --card-shadow: 0 8px 30px rgba(0, 0, 0, 0.08); /* Subtler shadow in light mode */
-}
+            /* Gradients */
+            --gradient: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            --card-shadow: 0 8px 30px rgba(0, 0, 0, 0.08); /* Subtler shadow in light mode */
+            
+            /* New background gradients */
+            --light-bg-gradient: radial-gradient(circle at 10% 20%, rgba(248, 249, 250, 0.9) 0%, rgba(232, 240, 254, 0.9) 90%);
+            --dark-bg-gradient: radial-gradient(circle at 10% 20%, rgba(18, 18, 18, 0.95) 0%, rgba(30, 12, 48, 0.95) 90%);
+        }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    particlesJS('particles-js', {
-      "particles": {
-        "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
-        "color": { "value": ["#4361ee", "#7209b7", "#f72585"] },
-        "shape": { "type": "circle" },
-        "opacity": {
-          "value": 0.3,
-          "random": true,
-          "anim": { "enable": true, "speed": 1, "opacity_min": 0.1 }
-        },
-        "size": { "value": 3, "random": true },
-        "line_linked": {
-          "enable": true,
-          "distance": 150,
-          "color": "var(--primary)",
-          "opacity": 0.2,
-          "width": 1
-        },
-        "move": {
-          "enable": true,
-          "speed": 1,
-          "direction": "none",
-          "random": true,
-          "straight": false,
-          "out_mode": "out"
-        }
-      },
-      "interactivity": {
-        "detect_on": "canvas",
-        "events": {
-          "onhover": { "enable": true, "mode": "repulse" },
-          "onclick": { "enable": true, "mode": "push" }
-        }
-      }
-    });
-  });
-</script>
-        
+
         body {
             font-family: 'Poppins', sans-serif;
             line-height: 1.7;
             color: var(--text);
-            background-color: var(--bg);
+            background: var(--light-bg-gradient);
             transition: all 0.4s ease;
             scroll-behavior: smooth;
+            min-height: 100vh;
         }
-#particles-js {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1; /* Ensures content stays on top */
-  opacity: 0.5;
-}
 
-body.dark #particles-js {
-  opacity: 0.8;
-}
-          
         body.dark {
             color: var(--dark-text);
-            background-color: var(--dark-bg);
+            background: var(--dark-bg-gradient);
         }
 
+        /* Particle JS container */
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        body.dark #particles-js {
+            opacity: 0.6;
+        }
+
+        /* Animated gradient background for sections */
+        .animated-bg {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .animated-bg::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                to bottom right,
+                rgba(67, 97, 238, 0.1),
+                rgba(114, 9, 183, 0.1),
+                rgba(247, 37, 133, 0.1)
+            );
+            animation: gradientRotate 15s ease infinite;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        body.dark .animated-bg::before {
+            background: linear-gradient(
+                to bottom right,
+                rgba(67, 97, 238, 0.05),
+                rgba(114, 9, 183, 0.05),
+                rgba(247, 37, 133, 0.05)
+            );
+            opacity: 0.3;
+        }
+
+        @keyframes gradientRotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* DNA strand animation in background */
+        .dna-strand {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            opacity: 0.05;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%234361ee' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+            animation: dnaMove 100s linear infinite;
+        }
+
+        body.dark .dna-strand {
+            opacity: 0.1;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%234895ef' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+
+        @keyframes dnaMove {
+            0% { background-position: 0 0; }
+            100% { background-position: 1000px 1000px; }
+        }
+
+        /* Rest of your existing CSS remains the same */
         h1, h2, h3, h4 {
             font-family: 'Playfair Display', serif;
             font-weight: 600;
@@ -122,6 +152,7 @@ body.dark #particles-js {
 
         section {
             padding: 6rem 0;
+            position: relative;
         }
 
         .section-title {
@@ -891,7 +922,7 @@ body.dark #particles-js {
             font-size: 1.2rem;
             box-shadow: 0 5px 20px rgba(67, 97, 238, 0.4);
             cursor: pointer;
-            opacity: 0;
+            opacity: 0
             visibility: hidden;
             transition: all 0.3s;
             z-index: 999;
