@@ -271,26 +271,21 @@ li {
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   margin-top: 10px;
-}
-/* Prevent default target styles */
-:target {
-  outline: none;
-}
 
-nav ul li a:focus,
-nav ul li a:target {
-  text-decoration: none !important;
-  color: #000 !important;
-}
+/* Prevent default target styles */
 nav ul li a,
 nav ul li a:visited,
 nav ul li a:focus,
-nav ul li a:target {
+nav ul li a:active {
   color: #000 !important;
   text-decoration: none !important;
   font-weight: 600;
   font-size: 1rem;
-  outline: none;
 }
 
+nav ul li a:hover {
+  color: #000 !important;
+  transform: scale(1.05);
+  text-decoration: none !important;
+}
 
