@@ -271,36 +271,16 @@ li {
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   margin-top: 10px;
-
 }
-nav ul li a,
-nav ul li a:visited,
-nav ul li a:focus {
-  color: #000 !important;
-  text-decoration: none !important;
-  font-weight: 600;
-  font-size: 1rem;
+/* Prevent default target styles */
+:target {
+  outline: none;
 }
 
-nav ul li a:hover {
-  color: #000;
-  transform: scale(1.05);
-  text-decoration: none;
-}
-/* Fix 'Contact' link styling */
-nav ul li a[href="#contact"],
-nav ul li a[href="#contact"]:visited,
-nav ul li a[href="#contact"]:focus {
-  color: #000 !important;
+nav ul li a:focus,
+nav ul li a:target {
   text-decoration: none !important;
-  font-weight: 600;
-  font-size: 1rem;
-}
-
-nav ul li a[href="#contact"]:hover {
   color: #000 !important;
-  text-decoration: none !important;
-  transform: scale(1.05);
 }
 
 
