@@ -56,8 +56,8 @@ nav ul li a:hover {
   justify-content: start;
   align-items: flex-start;
   gap: 2rem;
-  margin-top: 2rem;
-  margin-left: 40px;
+  margin-top: 4rem;
+  margin-left: 50px;
 }
 
 .profile-container {
