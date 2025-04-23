@@ -51,7 +51,6 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
-/* Bio Section Styles */
 .bio-section.vertical-center {
   display: flex;
   align-items: flex-start;
@@ -81,6 +80,7 @@ nav ul li a:hover {
   font-size: 0.95rem;
 }
 
+
 /* Education & Interests Section */
 .education-section,
 .interests-section {
@@ -94,7 +94,7 @@ h2 {
 }
 
 ul {
-  padding-left: 20px;
+  padding-left: 30px;
   list-style-type: disc;
 }
 
