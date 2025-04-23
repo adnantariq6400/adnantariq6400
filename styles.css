@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  background: linear-gradient(to right, #0f2027, #2c5364, #14a098); /* Fresh green tones */
+  background: linear-gradient(135deg, #2b2b2b, #8B0000, #006400); /* Fresh green tones */
   color: #333;
 }
 
