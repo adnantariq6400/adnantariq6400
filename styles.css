@@ -54,11 +54,10 @@ nav ul {
 }
 
 nav ul li a {
-  color: #000;
-  text-decoration: none;
+  color: #000; /* Ensures the text color is black, same as your header */
   font-weight: 600;
   font-size: 1rem;
-  transition: transform 0.2s, color 0.3s ease;
+  text-decoration: none;
 }
 
 nav ul li a:hover {
