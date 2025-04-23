@@ -14,24 +14,38 @@ body {
   margin: auto;
   padding: 20px;
 }
+/* Header with vibrant gradient */
+header {
+  background: linear-gradient(90deg, #f12711, #f5af19, #1fa2ff);
+  color: #fff;
+  padding: 20px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
 
+/* Header layout */
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1100px;
+  margin: auto;
   padding: 0 20px;
+  flex-wrap: wrap;
 }
 
+/* Your name on the left */
 .header-name {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1.8rem;
+  font-weight: 700;
   color: #fff;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
 
+/* Navigation styles */
 nav ul {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   margin: 0;
   padding: 0;
@@ -41,11 +55,13 @@ nav ul li a {
   color: #fff;
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.3s;
+  font-size: 1rem;
+  transition: transform 0.2s, color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: #ffeb3b;
+  color: #ffd700;
+  transform: scale(1.05);
 }
 
 .bio-section {
