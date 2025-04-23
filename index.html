@@ -8,50 +8,71 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
+  <!-- Header Section -->
   <header>
     <div class="container">
       <h1>Hafiz Muhammad Adnan Tariq</h1>
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li><a href="skills.html">Skills</a></li>
-          <li><a href="experience.html">Experience</a></li>
-          <li><a href="projects.html">Projects</a></li>
+          <li><a href="#bio">Home</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section class="container profile-section">
-    <div class="profile">
-      <img src="profile.jpg" alt="Profile Photo of Hafiz Muhammad Adnan Tariq" class="profile-img" />
-      <div class="bio">
+  <!-- Bio Section -->
+  <section id="bio" class="container">
+    <div class="bio-section">
+      <img src="profile.jpg" alt="Profile Image" class="profile-img"/>
+      <div class="bio-text">
         <h2>Bio</h2>
         <p>
-          I am a Bioinformatician and NGS Data Analyst with a strong background in metagenomics, medical image analysis, and machine learning. 
-          My academic journey and professional work span research in microbiome dynamics, antimicrobial resistance, and AI-powered healthcare systems.
+          I am a Bioinformatician with a focus on metagenomics, AI in healthcare, and NGS data analysis. 
+          Currently, I am exploring T2D patient microbiomes and AI-powered systems for healthcare.
         </p>
+      </div>
+    </div>
+  </section>
 
-        <h2>Education</h2>
-        <ul>
-          <li><strong>MS in Bioinformatics</strong>, NUST (2022–2024)</li>
-          <li><strong>BS in Bioinformatics</strong>, QAU (2017–2021)</li>
-        </ul>
+  <!-- Education Section -->
+  <section id="education" class="container">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>MS in Bioinformatics</strong>, NUST University (2022–2024)</li>
+      <li><strong>BS in Bioinformatics</strong>, QAU (2017–2021)</li>
+    </ul>
+  </section>
 
-        <h2>Connect</h2>
-        <ul class="social-icons">
+  <!-- Projects Section -->
+  <section id="projects" class="container">
+    <h2>Projects</h2>
+    <div class="projects">
+      <!-- Add project details here -->
+      <div class="project">
+        <h3>Identification of Key Taxonomic and Metabolic Players in the Gut Metagenome of T2D Patients</h3>
+        <p>Employed NGS techniques and metagenomic analysis to study the gut microbiome of T2D patients.</p>
+      </div>
+      <div class="project">
+        <h3>Machine Learning Identifies Microbial Biomarkers</h3>
+        <p>Used machine learning to identify AMR genes in zebrafish gut metagenomes.</p>
+      </div>
+      <!-- More projects -->
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer id="contact">
+    <div class="container">
+       <ul class="social-icons">
           <li><a href="mailto:adnantariq2525@gmail.com" title="Email"><i class="fas fa-envelope"></i></a></li>
           <li><a href="https://github.com/adnantariq6400" target="_blank" title="GitHub"><i class="fab fa-github"></i></a></li>
           <li><a href="www.linkedin.com/in/adnan-tariq-9487a1169" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
           <li><a href="https://orcid.org/0009-0008-8499-8803" target="_blank" title="ORCID"><i class="fab fa-orcid"></i></a></li>
         </ul>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
       <p>&copy; 2025 Hafiz Muhammad Adnan Tariq</p>
     </div>
   </footer>
