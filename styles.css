@@ -272,14 +272,14 @@ li {
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   margin-top: 10px;
 
+}
 nav ul li a,
 nav ul li a:visited,
-nav ul li a:active,
 nav ul li a:focus {
-  color: #000;
+  color: #000 !important;
+  text-decoration: none !important;
   font-weight: 600;
   font-size: 1rem;
-  text-decoration: none;
 }
 
 nav ul li a:hover {
@@ -288,5 +288,4 @@ nav ul li a:hover {
   text-decoration: none;
 }
 
-}
 
