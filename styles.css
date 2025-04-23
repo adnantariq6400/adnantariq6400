@@ -58,8 +58,15 @@ nav ul li a:hover {
   flex-wrap: wrap;
 }
 
-.profile-container {
-  text-align: center;
+.profile-img {
+  width: 120px; /* Fixed small size */
+  height: 120px; /* Same height and width for a circle */
+  border-radius: 50%; /* Make the image round */
+  object-fit: cover; /* Ensure the image doesn't stretch */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow for better look */
+}
+.bio-text {
+  max-width: 800px;
 }
 
 .name-title {
