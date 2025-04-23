@@ -54,9 +54,10 @@ nav ul li a:hover {
 /* Bio Section */
 .bio-section {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;  /* Changed to column to stack elements vertically */
   align-items: center;
   gap: 2rem;
+  text-align: center; /* Ensure text is centered */
 }
 
 .profile-img {
@@ -69,7 +70,31 @@ nav ul li a:hover {
 
 .bio-text {
   max-width: 800px;
+  text-align: center;  /* Center align text in the bio section */
 }
+
+/* Education & Interests Section */
+.education-section,
+.interests-section {
+  display: block;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+h2 {
+  color: #0077b6;
+  font-size: 1.75rem;
+}
+
+ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+ul li {
+  margin: 5px 0;
+}
+
 
 /* Project & Publication Sections */
 .card-list {
