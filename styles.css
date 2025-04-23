@@ -53,10 +53,11 @@ nav ul li a:hover {
 
 .bio-section {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: flex-start;
   gap: 2rem;
   margin-top: 2rem;
+  margin-left: 40px;
 }
 
 .profile-container {
