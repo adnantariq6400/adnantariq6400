@@ -51,22 +51,45 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
-.bio-section.vertical-center {
+.bio-section {
   display: flex;
+  justify-content: space-between;
   align-items: flex-start;
   gap: 2rem;
-  flex-wrap: wrap;
+  margin-top: 2rem;
 }
 
-.bio-profile {
+.profile-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  min-width: 150px;
+  align-items: flex-end;
+  text-align: right;
+  width: 220px;
+}
+
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-details h2 {
+  margin: 10px 0 5px;
+  font-size: 1.25rem;
+  color: #0077b6;
+}
+
+.profile-details p {
+  margin: 2px 0;
+  font-size: 0.95rem;
+  color: #444;
 }
 
 .bio-text {
-  max-width: 800px;
+  max-width: 700px;
+  flex: 1;
 }
 
 .name-title {
