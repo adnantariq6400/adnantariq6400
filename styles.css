@@ -4,8 +4,10 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  background: linear-gradient(135deg, #1e1f26, #3a3f44, #2a363b); /* Fresh green tones */
-  color: #f4f4f4;
+  background: linear-gradient(135deg, #ffffff, #3a3f44, #f4f4f8, #2a363b); /* Fresh green tones */
+  color: #222;
+  font-family: 'Poppins', sans-serif; /* Modern, elegant font */
+  line-height: 1.7;
 }
 
 .container {
@@ -133,7 +135,7 @@ nav ul li a:hover {
 }
 
 h2 {
-  color: #222;
+  color: #c0392b;
   font-size: 1.75rem;
 }
 
@@ -204,5 +206,19 @@ footer {
   text-align: center;
   padding: 15px 0;
   margin-top: 2rem;
+}
+/* Accent color for headings and links */
+h1, h2, h3, a {
+  color: #c0392b; /* a rich reddish accent */
+}
+
+a:hover {
+  color: #e74c3c;
+  text-decoration: underline;
+}
+
+/* Apply subtle text shadows */
+h1, h2, p {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
