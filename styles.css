@@ -207,18 +207,25 @@ footer {
   padding: 15px 0;
   margin-top: 2rem;
 }
+
 /* Accent color for headings and links */
 h1, h2, h3, a {
-  color: #c0392b; /* a rich reddish accent */
+  color: #FDFDFD; /* Vibrant white */
 }
 
 a:hover {
-  color: #e74c3c;
+  color: #F39C12; /* Bright, soft golden accent */
   text-decoration: underline;
 }
 
 /* Apply subtle text shadows */
 h1, h2, p {
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Soft shadow for better readability */
+}
+
+/* Change for body text and background for contrast */
+body {
+  color: #BDC3C7; /* Light gray text */
+  background-color: #2C3E50; /* Dark navy-blue background for contrast */
 }
 
