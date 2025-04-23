@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  background: linear-gradient(45deg, #ff6f61, #6a5acd, #ff6347); /* Vibrant gradient background */
+  background: linear-gradient(to right, #a8e063, #56ab2f); /* Fresh green tones */
   color: #333;
 }
 
