@@ -282,5 +282,15 @@ nav ul li a:target {
   text-decoration: none !important;
   color: #000 !important;
 }
+nav ul li a,
+nav ul li a:visited,
+nav ul li a:focus,
+nav ul li a:target {
+  color: #000 !important;
+  text-decoration: none !important;
+  font-weight: 600;
+  font-size: 1rem;
+  outline: none;
+}
 
 
