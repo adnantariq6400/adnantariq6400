@@ -229,3 +229,18 @@ body {
   background-color: #2C3E50; /* Dark navy-blue background for contrast */
 }
 
+/* Set white text for all main content sections */
+.bio-text,
+.education-section,
+.interests-section,
+p,
+li {
+  color: #FDFDFD; /* Vibrant white */
+}
+
+/* Optional: Make section headings match the new color too */
+.education-section h2,
+.interests-section h2 {
+  color: #FDFDFD;
+}
+
