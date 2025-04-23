@@ -4,8 +4,8 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  background: linear-gradient(135deg, #3a3f44, #2a363b); /* Fresh green tones */
-  color: #222;
+  background: linear-gradient(135deg, #2a363b, #1d3e2f, #3a3f44); /* Dark with greenish tones */
+  color: #FDFDFD; /* Vibrant white text for contrast */
   font-family: 'Poppins', sans-serif; /* Modern, elegant font */
   line-height: 1.7;
 }
