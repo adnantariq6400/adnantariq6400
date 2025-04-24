@@ -1,4 +1,7 @@
 /* General Styles */
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
@@ -48,7 +51,6 @@ header {
   width: 90px;
   border-radius: 50%;
   object-fit: cover;
-  display: block;
 }
 
 /* Navigation styles */
