@@ -80,6 +80,8 @@ nav ul li a:hover {
   font-size: 1rem;
   color: #fefefe;
   text-align: justify;
+  margin-left: 1in;  /* Move right */
+  margin-top: 1in;   /* Move down */
 }
 
 .profile-container {
