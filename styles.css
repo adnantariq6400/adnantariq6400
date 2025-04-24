@@ -197,12 +197,14 @@ header {
 .degree {
   font-size: 1.2rem; /* Font size of the degree */
   font-weight: bold; /* Makes the degree bold */
+  display: block;
 }
 
 .university-name {
   flex-grow: 1; /* Makes the university name take up remaining space */
   text-align: right; /* Aligns the university name to the right */
   font-size: 1rem; /* Font size of the university name */
+  display: block;
 }
 
 /* Interests Section */
