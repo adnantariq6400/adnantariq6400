@@ -186,7 +186,7 @@ header {
   display: flex;
   justify-content: space-between; /* Justify content to space out items */
   align-items: center;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 
 .degree-icon {
