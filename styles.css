@@ -330,3 +330,46 @@ nav ul li a:hover {
   text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
+/* Header container */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo image */
+.logo-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Navigation */
+.nav-links ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links ul li a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #000;
+  transition: color 0.3s ease, transform 0.2s;
+}
+
+.nav-links ul li a:hover {
+  color: #007f5f;
+  transform: scale(1.05);
+}
+
