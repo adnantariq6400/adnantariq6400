@@ -71,14 +71,14 @@ nav ul li a:hover {
   align-items: flex-start;
   gap: 3rem;
   margin-top: 2rem;
-  margin-left: -10px;
+  margin-left: 20px;
 }
 
 .profile-container {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  text-align: left;
+  text-align: center;
   width: 220px;
 }
 
@@ -91,7 +91,7 @@ nav ul li a:hover {
 }
 
 .profile-details h2 {
-  margin: 20px 0 5px;
+  margin: 10px 0 5px;
   font-size: 2rem;
   color: #45deg, #ffffff, #fefefe, #fdf6e3;
 }
@@ -106,9 +106,8 @@ nav ul li a:hover {
   max-width: 700px;
   flex: 1;
 }
-
 .name-title {
-  margin: 10px 0 0;
+  margin: 5px 0 0;
   font-size: 2rem;
   color: #fdfdfd, #fefefe, #ffffff;
 }
@@ -132,6 +131,11 @@ nav ul li a:hover {
   padding: 20px;
   margin-top: 700px; /* Add some space between sections */
 }
+.education-section,
+.interests-section {
+  margin-left: 40px;   /* Move right */
+  margin-top: -30px;   /* Move up */
+}
 
 h2 {
   color: #c0392b;
@@ -139,7 +143,7 @@ h2 {
 }
 
 ul {
-  padding-left: -20px;
+  padding-left: 20px;
   list-style-type: disc;
 }
 
