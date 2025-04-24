@@ -41,36 +41,26 @@ body {
 }
 /* Header with vibrant gradient */
 header {
-  background-color: #f1f1f1; /* light grey */
-  color: #000; /* black text */
-  padding: 20px 0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  padding: 10px 40px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* Header layout */
-.header-container {
+.container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1100px;
-  margin: auto;
-  padding: 0 20px;
-  flex-wrap: wrap;
 }
 
-/* Your name on the left */
-.header-name {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #000;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+.logo img {
+  height: 50px;
 }
 
-.logo {
-  height: 90px;
-  width: 90px;
-  border-radius: 50%;
-  object-fit: cover;
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
 }
 
 /* Navigation styles */
