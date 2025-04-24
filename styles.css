@@ -89,16 +89,22 @@ nav ul li a:hover {
   object-fit: cover;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+.profile-details {
+  text-align: center;
+  color: #fefefe; /* soft whitish */
+  font-weight: 600;
+  margin-top: 10px;
+}
 
 .profile-details h2 {
   margin: 10px 0 5px;
-  font-size: 1rem;
+  font-size: 2rem;
   color: #45deg, #ffffff, #fefefe, #fdf6e3;
 }
 
 .profile-details p {
   margin: 3px 0;
-  font-size: 0.75rem;
+  font-size: 1rem;
   color: #45deg, #ffffff, #fefefe, #fdf6e3;
 }
 
