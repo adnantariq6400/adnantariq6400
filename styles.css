@@ -167,16 +167,19 @@ header {
   display: flex;
   justify-content: space-between;
   gap: 3rem;
+  margin-top: 0; /* Remove any top margin if there is any */
 }
 
 .education-section, .interests-section {
   flex: 1;
+  margin-top: 0; /* Remove any margin on the top of sections */
 }
 
 /* Education Section */
 .education-section ul {
   list-style-type: none; /* Remove bullet points */
   padding: 0;
+  margin-top: 0; /* Remove margin at the top of the list */
 }
 
 .education-item {
@@ -206,6 +209,7 @@ header {
 .interests-section ul {
   list-style-type: none; /* Remove bullet points */
   padding: 0;
+  margin-top: 0; /* Remove margin at the top of the list */
 }
 
 .interests-section li {
