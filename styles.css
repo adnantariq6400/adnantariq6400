@@ -27,7 +27,7 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  background: yellow; /* Dark with greenish tones */
+  background: (135deg, #2a363b, #1d3e2f, #3a3f44); /* Dark with greenish tones */
   color: #FDFDFD; /* Vibrant white text for contrast */
   font-family: 'Poppins', sans-serif; /* Modern, elegant font */
   line-height: 1.7;
@@ -47,19 +47,17 @@ header {
 }
 
 /* Header container */
-.header-container {
+
+.logo-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 10px 40px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  justify-content: flex-start;
+  padding-left: 20px;
 }
 
-/* Logo image */
-.logo-img {
-  height: 100px;
-  width: 100px;
+.logo {
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   object-fit: cover;
   display: block;
