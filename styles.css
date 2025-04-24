@@ -162,39 +162,55 @@ header {
 }
 
 
-/* Education & Interests Section */
-.education-section,
-.interests-section {
-  padding: 20px;
-  margin-top: 700px; /* Add some space between sections */
+/* Common container for Education and Interests */
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
 }
-.education-section {
-  margin-left: 1in; /* Moves the section almost 1 inch towards the right */
+
+.education-section, .interests-section {
+  flex: 1;
+}
+
+/* Education Section */
+.education-section ul {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0;
 }
 
 .education-item {
-  margin-bottom: 10px; /* Optional for spacing between items */
+  display: flex;
+  justify-content: space-between; /* Justify content to space out items */
+  align-items: center;
+  margin-bottom: 15px;
 }
 
-.education-text {
-  display: block; /* Ensures each item is on its own line */
-}
-.interests-section {
-  margin-left: 0;
+.degree-icon {
+  font-size: 1.5rem; /* Size of the icon */
+  margin-right: 15px; /* Space between the icon and the degree */
 }
 
-h2 {
-  color: #c0392b;
-  font-size: 1.75rem;
+.degree {
+  font-size: 1.2rem; /* Font size of the degree */
+  font-weight: bold; /* Makes the degree bold */
 }
 
-ul {
-  padding-left: 20px;
-  list-style-type: disc;
+.university-name {
+  flex-grow: 1; /* Makes the university name take up remaining space */
+  text-align: right; /* Aligns the university name to the right */
+  font-size: 1rem; /* Font size of the university name */
 }
 
-ul li {
-  margin: 5px 0;
+/* Interests Section */
+.interests-section ul {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0;
+}
+
+.interests-section li {
+  font-size: 1rem; /* Font size of interests */
+  line-height: 1.7; /* Adjusts line height for readability */
 }
 
 
