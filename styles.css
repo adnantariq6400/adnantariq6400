@@ -166,7 +166,7 @@ header {
 .container {
   display: flex;
   justify-content: space-between;
-  gap: 3rem;
+  gap: 1rem;
   margin-top: 0; /* Remove any top margin if there is any */
 }
 
@@ -186,7 +186,7 @@ header {
   display: flex;
   justify-content: space-between; /* Justify content to space out items */
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
 .degree-icon {
@@ -216,8 +216,10 @@ header {
   font-size: 1rem; /* Font size of interests */
   line-height: 1.7; /* Adjusts line height for readability */
 }
-
-
+/* Remove any margin from <h2> to reduce space */
+h2 {
+  margin: 0; /* Remove any default margin from the headings */
+}
 
 /* Project & Publication Sections */
 .card-list {
