@@ -58,8 +58,8 @@ header {
 
 /* Logo image */
 .logo-img {
-  width: 90px;
-  height: 90px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -165,7 +165,7 @@ header {
 }
 .education-section,
 .interests-section {
-  margin-left: 80px;   /* Move right */
+  margin-left: 100px;   /* Move right */
   margin-top: -60px;   /* Move up */
 }
 
