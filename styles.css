@@ -22,16 +22,19 @@ nav ul {
   justify-content: center; /* or space-between */
 }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+* {
   margin: 0;
   padding: 0;
-  line-height: 1.6;
-  background:linear-gradient(135deg, #2a363b, #1d3e2f, #3a3f44); /* Dark with greenish tones */
-  color: #FDFDFD; /* Vibrant white text for contrast */
-  font-family: 'Poppins', sans-serif; /* Modern, elegant font */
-  line-height: 1.7;
+  box-sizing: border-box;
 }
+
+body {
+  font-family: 'Poppins', sans-serif; /* Modern, elegant font */
+  background: linear-gradient(135deg, #2a363b, #1d3e2f, #3a3f44); /* Dark with greenish tones */
+  color: #FDFDFD; /* Vibrant white text for contrast */
+  line-height: 1.7; /* Adjusted for better readability */
+}
+
 
 .container {
   width: 90%;
@@ -116,8 +119,8 @@ header {
 }
 
 .profile-img {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
