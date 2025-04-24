@@ -42,6 +42,11 @@ header {
   color: #000;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
+.logo {
+  height: 50px; /* Adjust size as needed */
+  width: auto;
+  object-fit: contain;
+}
 
 /* Navigation styles */
 nav ul {
