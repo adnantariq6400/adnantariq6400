@@ -130,7 +130,7 @@ nav ul li a:hover {
 .education-section,
 .interests-section {
   padding: 20px;
-  margin-top: 20px; /* Add some space between sections */
+  margin-top: 30px; /* Add some space between sections */
 }
 
 h2 {
@@ -139,7 +139,7 @@ h2 {
 }
 
 ul {
-  padding-left: 30px;
+  padding-left: -10px;
   list-style-type: disc;
 }
 
