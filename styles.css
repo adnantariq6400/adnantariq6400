@@ -70,8 +70,8 @@ nav ul li a:hover {
   justify-content: start;
   align-items: flex-start;
   gap: 3rem;
-  margin-top: 5rem;
-  margin-left: 60px;
+  margin-top: 2rem;
+  margin-left: -10px;
 }
 
 .profile-container {
@@ -92,13 +92,13 @@ nav ul li a:hover {
 
 .profile-details h2 {
   margin: 20px 0 5px;
-  font-size: 1.25rem;
+  font-size: 2rem;
   color: #45deg, #ffffff, #fefefe, #fdf6e3;
 }
 
 .profile-details p {
-  margin: 2px 0;
-  font-size: 0.95rem;
+  margin: 3px 0;
+  font-size: 1.5rem;
   color: #45deg, #ffffff, #fefefe, #fdf6e3;
 }
 
@@ -109,12 +109,12 @@ nav ul li a:hover {
 
 .name-title {
   margin: 10px 0 0;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #fdfdfd, #fefefe, #ffffff;
 }
 
 .sub-title {
-  margin: 5px 0;
+  margin: 10px 0;
   font-weight: 500;
   color: #fdfdfd;
 }
@@ -122,7 +122,7 @@ nav ul li a:hover {
 .uni {
   margin: 0;
   color: #fdfdfd;
-  font-size: 0.95rem;
+  font-size: 1.5rem;
 }
 
 
@@ -130,7 +130,7 @@ nav ul li a:hover {
 .education-section,
 .interests-section {
   padding: 20px;
-  margin-top: 30px; /* Add some space between sections */
+  margin-top: 700px; /* Add some space between sections */
 }
 
 h2 {
@@ -139,7 +139,7 @@ h2 {
 }
 
 ul {
-  padding-left: -10px;
+  padding-left: -20px;
   list-style-type: disc;
 }
 
