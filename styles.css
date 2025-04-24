@@ -67,11 +67,19 @@ nav ul li a:hover {
 
 .bio-section {
   display: flex;
-  justify-content: start;
+  flex-wrap: wrap;
   align-items: flex-start;
-  gap: 3rem;
+  gap: 2rem;
   margin-top: 2rem;
-  margin-left: 10px;
+  margin-left: 20px;
+}
+
+.bio-text {
+  max-width: 700px;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #fefefe;
+  text-align: justify;
 }
 
 .profile-container {
@@ -107,10 +115,6 @@ nav ul li a:hover {
   color: #45deg, #ffffff, #fefefe, #fdf6e3;
 }
 
-.bio-text {
-  max-width: 100px;
-  flex: 1;
-}
 .name-title {
   margin: 5px 0 0;
   font-size: 1.5rem;
