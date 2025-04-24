@@ -43,8 +43,8 @@ header {
   text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
 .logo {
-  height: 50px; /* Adjust size as needed */
-  width: auto;
+  height: 50%; /* Adjust size as needed */
+  width: 50%;
   object-fit: contain;
 }
 
