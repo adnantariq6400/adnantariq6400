@@ -93,13 +93,13 @@ nav ul li a:hover {
 .profile-details h2 {
   margin: 10px 0 5px;
   font-size: 1.25rem;
-  color: #0077b6;
+  color: #45deg, #ffffff, #ffd700;
 }
 
 .profile-details p {
   margin: 2px 0;
   font-size: 0.95rem;
-  color: #444;
+  color: #45deg, #ffffff, #ffd700;
 }
 
 .bio-text {
