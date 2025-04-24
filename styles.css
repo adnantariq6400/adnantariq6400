@@ -78,7 +78,7 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  text-align: center;
+  text-align: left;
   width: 220px;
 }
 
