@@ -168,10 +168,19 @@ header {
   padding: 20px;
   margin-top: 700px; /* Add some space between sections */
 }
-.education-section,
+.education-section {
+  margin-left: 1in; /* Moves the section almost 1 inch towards the right */
+}
+
+.education-item {
+  margin-bottom: 10px; /* Optional for spacing between items */
+}
+
+.education-text {
+  display: block; /* Ensures each item is on its own line */
+}
 .interests-section {
-  margin-left: 100px;   /* Move right */
-  margin-top: -60px;   /* Move up */
+  margin-left: 0;
 }
 
 h2 {
