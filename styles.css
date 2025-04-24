@@ -69,9 +69,9 @@ nav ul li a:hover {
   display: flex;
   justify-content: start;
   align-items: flex-start;
-  gap: 2rem;
-  margin-top: 3rem;
-  margin-left: 30px;
+  gap: 3rem;
+  margin-top: 5rem;
+  margin-left: 60px;
 }
 
 .profile-container {
@@ -79,7 +79,7 @@ nav ul li a:hover {
   flex-direction: column;
   align-items: flex-end;
   text-align: left;
-  width: 120px;
+  width: 220px;
 }
 
 .profile-img {
@@ -91,15 +91,15 @@ nav ul li a:hover {
 }
 
 .profile-details h2 {
-  margin: 10px 0 5px;
+  margin: 20px 0 5px;
   font-size: 1.25rem;
-  color: #45deg, #ffffff, #fefefe, #fdf6e3;
+  color: #fdfdfd;
 }
 
 .profile-details p {
   margin: 2px 0;
   font-size: 0.95rem;
-  color: #000;
+  color: #fdfdfd;
 }
 
 .bio-text {
@@ -110,18 +110,18 @@ nav ul li a:hover {
 .name-title {
   margin: 10px 0 0;
   font-size: 1.5rem;
-  color: #000;
+  color: #fdfdfd;
 }
 
 .sub-title {
   margin: 5px 0;
   font-weight: 500;
-  color: #222;
+  color: #fdfdfd;
 }
 
 .uni {
   margin: 0;
-  color: #222;
+  color: #fdfdfd;
   font-size: 0.95rem;
 }
 
