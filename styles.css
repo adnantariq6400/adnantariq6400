@@ -290,7 +290,7 @@ nav ul li a:hover {
 }
 .fancy-bio h2,
 .fancy-bio p {
-  background: linear-gradient(45deg, #ffffff, #ffd700);
+  background: linear-gradient(fdfdfd);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
