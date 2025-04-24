@@ -2,6 +2,26 @@
 html {
   scroll-behavior: smooth;
 }
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav ul {
+  display: flex;
+  gap: 20px;
+  justify-content: center; /* or space-between */
+}
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
