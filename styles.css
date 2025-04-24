@@ -63,27 +63,6 @@ header {
   font-weight: 500;
 }
 
-/* Navigation styles */
-nav ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li a {
-  color: #000; /* Ensures the text color is black, same as your header */
-  font-weight: 600;
-  font-size: 1rem;
-  text-decoration: none;
-}
-
-nav ul li a:hover {
-  color: #000;
-  transform: scale(1.05);
-}
 
 .bio-section {
   display: flex;
@@ -335,12 +314,6 @@ nav ul li a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ffffff;
-  padding: 10px 30px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
 }
 
 /* Logo image */
@@ -351,21 +324,23 @@ nav ul li a:hover {
   object-fit: cover;
 }
 
-/* Navigation */
+/* Ensure nav items are in a row */
 .nav-links ul {
   display: flex;
+  justify-content: flex-end;
+  align-items: center;
   list-style: none;
-  gap: 25px;
+  gap: 20px;
   margin: 0;
   padding: 0;
 }
 
 .nav-links ul li a {
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
   color: #000;
-  transition: color 0.3s ease, transform 0.2s;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .nav-links ul li a:hover {
