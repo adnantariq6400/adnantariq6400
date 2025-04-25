@@ -163,23 +163,21 @@ header {
 
 
 /* Common container for Education and Interests */
+/* Common container for Education and Interests */
 .container {
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
-  margin-top: 0; /* Remove any top margin if there is any */
+  gap: 3rem;
 }
 
 .education-section, .interests-section {
   flex: 1;
-  margin-top: 0; /* Remove any margin on the top of sections */
 }
 
 /* Education Section */
 .education-section ul {
   list-style-type: none; /* Remove bullet points */
   padding: 0;
-  margin-top: 0; /* Remove margin at the top of the list */
 }
 
 .education-item {
@@ -197,31 +195,25 @@ header {
 .degree {
   font-size: 1.2rem; /* Font size of the degree */
   font-weight: bold; /* Makes the degree bold */
-  display: block;
 }
 
 .university-name {
   flex-grow: 1; /* Makes the university name take up remaining space */
   text-align: right; /* Aligns the university name to the right */
   font-size: 1rem; /* Font size of the university name */
-  display: block;
 }
 
 /* Interests Section */
 .interests-section ul {
   list-style-type: none; /* Remove bullet points */
   padding: 0;
-  margin-top: 0; /* Remove margin at the top of the list */
 }
 
 .interests-section li {
   font-size: 1rem; /* Font size of interests */
   line-height: 1.7; /* Adjusts line height for readability */
 }
-/* Remove any margin from <h2> to reduce space */
-h2 {
-  margin: 0; /* Remove any default margin from the headings */
-}
+
 
 /* Project & Publication Sections */
 .card-list {
