@@ -256,7 +256,7 @@ footer {
 
 .bio-text {
   flex: 1;
-  min-width: 600px;
+  min-width: 200px;
   line-height: 1.6;
   font-size: 1rem;
   color: #fefefe;
