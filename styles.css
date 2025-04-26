@@ -176,31 +176,37 @@ header {
 
 /* Education Section */
 .education-section ul {
-  list-style-type: none; /* Remove bullet points */
+  list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .education-item {
   display: flex;
-  justify-content: space-between; /* Justify content to space out items */
-  align-items: center;
-  margin-bottom: 15px;
+  align-items: flex-start; /* icon and text align from the top */
+  margin-bottom: 20px; /* space between MS and BS */
 }
 
 .degree-icon {
-  font-size: 1.5rem; /* Size of the icon */
-  margin-right: 15px; /* Space between the icon and the degree */
+  font-size: 24px;
+  margin-right: 10px;
+  margin-top: 5px; /* move the icon slightly down */
+  color: #007f5f; /* optional color */
+}
+
+.degree-info {
+  display: flex;
+  flex-direction: column; /* put degree and university vertically */
 }
 
 .degree {
-  font-size: 1.2rem; /* Font size of the degree */
-  font-weight: bold; /* Makes the degree bold */
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .university-name {
-  flex-grow: 1; /* Makes the university name take up remaining space */
-  text-align: right; /* Aligns the university name to the right */
-  font-size: 1rem; /* Font size of the university name */
+  font-size: 1rem;
+  color: #666;
 }
 
 /* Interests Section */
