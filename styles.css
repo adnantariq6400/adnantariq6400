@@ -53,16 +53,16 @@ header {
 }
 
 /* Header container */
-.header-container {
+header {
   background-color: #fff;
   padding: 10px 40px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.logo-nav-wrapper {
+.header-container {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* logo on left, nav on right */
+  justify-content: space-between;
 }
 
 .logo-container {
@@ -80,7 +80,7 @@ header {
 .nav-links {
   flex: 1;
   display: flex;
-  justify-content: center; /* center the nav links */
+  justify-content: center; /* Center the nav */
 }
 
 .nav-links ul {
@@ -88,7 +88,7 @@ header {
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 20px;
+  gap: 30px; /* you can adjust spacing */
 }
 
 .nav-links ul li a {
@@ -101,8 +101,8 @@ header {
 
 .nav-links ul li a:hover {
   color: #007f5f;
-  transform: scale(1.05);
 }
+
 
 /*.logo-container {
   display: flex;
