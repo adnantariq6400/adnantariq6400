@@ -62,8 +62,7 @@ header {
 .header-container {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* start from left */
-  position: relative; /* important! */
+  justify-content: space-between; /* Logo left, headings right */
 }
 
 .logo-container {
@@ -186,13 +185,13 @@ header {
   margin: 10px 0 5px;
   font-size: 2rem;
   color: #45deg, #ffffff, #fefefe, #fdf6e3;
-}
+
 
 .profile-details p {
   margin: 3px 0;
   font-size: 1rem;
   color: #45deg, #ffffff, #fefefe, #fdf6e3;
-}
+
 
 .name-title {
   margin: 5px 0 0;
