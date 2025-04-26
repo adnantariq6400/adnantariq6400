@@ -12,8 +12,6 @@ body {
   line-height: 1.7;
   padding-top: 80px; /* Add padding to account for fixed header */
 }
-
-/* Header Styles */
 header {
   position: fixed;
   top: 0;
@@ -26,7 +24,19 @@ header {
   z-index: 1000;
   height: 80px;
 }
-
+/* Header Styles
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 1000;
+  height: 80px;
+} */
 .header-container {
   display: flex;
   align-items: center;
@@ -35,7 +45,18 @@ header {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 40px;
+  position: relative;
+  height: 100%;
 }
+/*.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+} */
 
 .logo-container {
   display: flex;
@@ -44,17 +65,91 @@ header {
 }
 
 .logo {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   object-fit: cover;
 }
-
 .nav-links {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
+.nav-links ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+.nav-links ul li a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.nav-links ul li a:hover {
+  color: #007f5f;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1001;
+}
+
+/* Mobile Menu Styles */
+@media (max-width: 576px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .nav-links.active {
+    transform: translateX(0);
+  }
+  
+  .nav-links ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .mobile-menu-btn {
+    display: block;
+  }
+  
+  body.menu-open {
+    overflow: hidden;
+  }
+}
+/*.nav-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+} 
 
 .nav-links ul {
   display: flex;
@@ -91,7 +186,7 @@ header {
   .nav-links ul {
     gap: 15px;
   }
-}
+} */
 
 @media (max-width: 768px) {
   .header-container {
