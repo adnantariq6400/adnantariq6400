@@ -10,7 +10,28 @@
 </head>
 <body>
 
-<header>
+  <header>
+    <div class="header-container">
+      <div class="logo-container">
+        <img src="assets/logo.png" alt="Logo" class="logo" />
+      </div>
+      <nav class="nav-links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- Optional mobile menu button -->
+      <button class="mobile-menu-btn" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+<!-- <header>
   <div class="header-container">
     <div class="logo-container">
       <img src="assets/logo.png" alt="Logo" class="logo" />
@@ -26,7 +47,7 @@
       </ul>
     </nav>
   </div>
-</header>
+</header> -->
 
   <!-- Header Section 
   <header>
@@ -117,6 +138,41 @@
       <p>&copy; 2025 Hafiz Muhammad Adnan Tariq</p>
     </div>
   </footer>
+  <!-- ... rest of your HTML ... -->
+
+<!-- Back to top button -->
+<div class="back-to-top" aria-label="Back to top">
+  <i class="fas fa-arrow-up"></i>
+</div>
+
+<!-- Add this right before </body> -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+const menuBtn = document.querySelector('.mobile-menu-btn');
+const navLinks = document.querySelector('.nav-links ul');
+
+// Only add click handler if elements exist (for pages without header)
+if (menuBtn && navLinks) {
+  // Initially hide on mobile
+  if (window.innerWidth <= 576) {
+    navLinks.style.display = 'none';
+  }
+  
+  menuBtn.addEventListener('click', function() {
+    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+  });
+  
+  // Handle window resize
+  window.addEventListener('resize', function() {
+    if (window.innerWidth > 576) {
+      navLinks.style.display = 'flex';
+    } else {
+      navLinks.style.display = 'none';
+    }
+  });
+}
+});
+</script>
 </body>
 </html>
 

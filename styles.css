@@ -42,17 +42,129 @@ body {
   margin: auto;
   padding: 20px;
 }
+
 /* Header with vibrant gradient */
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
-  align-items: center;      /* Vertically align items in the center */
-  justify-content: space-between;  /* Spread logo and nav across */
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 1000;
+  width: 100%;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 60px; /* Reduced size for better proportion */
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.nav-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-links ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px; /* Reduced gap for better spacing */
+}
+
+.nav-links ul li a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.nav-links ul li a:hover {
+  color: #007f5f;
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .nav-links ul {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 10px 20px;
+  }
+  
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .nav-links ul {
+    gap: 10px;
+  }
+  
+  .nav-links ul li a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .nav-links {
+    position: static;
+    transform: none;
+    margin-left: auto;
+  }
+  
+  .nav-links ul {
+    display: none; /* Hide for mobile - consider hamburger menu */
+  }
+  
+  /* Alternative: Hamburger menu for mobile */
+  .mobile-menu-btn {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}
+/* Header with vibrant gradient */
+/* header {
+  display: flex;
+  align-items: center;      /* Vertically align items in the center 
+  justify-content: space-between;  /* Spread logo and nav across 
   padding: 10px 40px;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* Header container */
+/* Header container 
 header {
   background-color: #fff;
   padding: 10px 40px;
@@ -62,7 +174,7 @@ header {
 .header-container {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Logo left, headings right */
+  justify-content: space-between; /* Logo left, headings right 
 }
 
 .logo-container {
@@ -102,7 +214,7 @@ header {
 .nav-links ul li a:hover {
   color: #007f5f;
 }
-
+*/
 
 /*.logo-container {
   display: flex;
