@@ -77,6 +77,12 @@ header {
   object-fit: cover;
 }
 
+.nav-links {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* center the nav links */
+}
+
 .nav-links ul {
   display: flex;
   list-style: none;
