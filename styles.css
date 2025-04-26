@@ -98,8 +98,8 @@ header {
   flex-wrap: wrap;
   align-items: flex-start;
   gap: 2rem;
-  margin-top: 2rem;
-  margin-left: 20px;
+  margin-top: 3rem;
+  margin-left: 40px;
 }
 
 .bio-text {
@@ -128,7 +128,7 @@ header {
 .profile-details {
   color: #fefefe; /* soft whitish */
   font-weight: 600;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .profile-details h2 {
@@ -167,7 +167,7 @@ header {
 .container {
   display: flex;
   justify-content: space-between;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .education-section, .interests-section {
@@ -182,18 +182,18 @@ header {
 }
 
 .education-item {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .degree-line {
   display: flex;
   align-items: center; /* Icon and Degree on the same level */
-  margin-bottom: 5px; /* Small gap between degree and university */
+  margin-bottom: 3px; /* Small gap between degree and university */
 }
 
 .degree-icon {
   font-size: 20px;
-  margin-right: 8px; /* small gap between icon and degree text */
+  margin-right: 5px; /* small gap between icon and degree text */
   color: #007f5f; /* optional greenish color */
 }
 
@@ -205,10 +205,10 @@ header {
 .university-name {
   font-size: 1rem;
   color: #666;
-  margin-left: 28px; /* align university text slightly under degree text */
+  margin-left: 20px; /* align university text slightly under degree text */
 }
 .education-section {
-  margin-left: 120px;
+  margin-left: 140px;
 }
 
 /* Interests Section */
