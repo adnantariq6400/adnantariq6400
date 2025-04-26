@@ -154,14 +154,6 @@ header {
   margin-bottom: 2rem;
 }
 
-.bio-section {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 2rem;
-  margin: 2rem 0;
-}
-
 /* Footer Styles */
 footer {
   background-color: #fff;
@@ -213,4 +205,109 @@ footer {
 .back-to-top.active {
   opacity: 1;
   visibility: visible;
+}
+/* ====== NEW LAYOUT STYLES ====== */
+/* Main Content Layout */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Profile Section */
+.bio-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin: 2rem 0;
+  align-items: flex-start;
+}
+
+.profile-container {
+  flex: 0 0 220px;
+  text-align: center;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #007f5f;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.profile-details {
+  margin-top: 20px;
+}
+
+.profile-details h2 {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+  color: #fefefe;
+}
+
+.profile-details p {
+  margin: 5px 0;
+  color: #fefefe;
+  font-size: 1rem;
+}
+
+.bio-text {
+  flex: 1;
+  min-width: 300px;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #fefefe;
+}
+
+/* Education & Interests Section */
+.education-interests-container {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.education-section, .interests-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+.education-section h2, .interests-section h2 {
+  margin-bottom: 20px;
+  color: #fefefe;
+}
+
+.education-item {
+  margin-bottom: 20px;
+}
+
+.degree-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.degree-icon {
+  color: #007f5f;
+}
+
+.interests-section ul {
+  padding-left: 20px;
+}
+
+.interests-section li {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.interests-section li::before {
+  content: "•";
+  color: #007f5f;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
 }
