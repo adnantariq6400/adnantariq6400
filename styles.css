@@ -53,23 +53,30 @@ header {
 }
 
 /* Header container */
+.header-container {
+  background-color: #fff;
+  padding: 10px 40px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo-nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* logo on left, nav on right */
+}
 
 .logo-container {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  padding-left: 20px;
 }
 
 .logo {
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   object-fit: cover;
-  display: block;
 }
 
-/* Navigation styling */
 .nav-links ul {
   display: flex;
   list-style: none;
@@ -91,6 +98,43 @@ header {
   transform: scale(1.05);
 }
 
+/*.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 20px;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Navigation styling 
+.nav-links ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+.nav-links ul li a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links ul li a:hover {
+  color: #007f5f;
+  transform: scale(1.05);
+}
+*/
 
 
 .bio-section {
