@@ -182,21 +182,19 @@ header {
 }
 
 .education-item {
+  margin-bottom: 20px;
+}
+
+.degree-line {
   display: flex;
-  align-items: flex-start; /* icon and text align from the top */
-  margin-bottom: 20px; /* space between MS and BS */
+  align-items: center; /* Icon and Degree on the same level */
+  margin-bottom: 5px; /* Small gap between degree and university */
 }
 
 .degree-icon {
-  font-size: 24px;
-  margin-right: 10px;
-  margin-top: 5px; /* move the icon slightly down */
-  color: #007f5f; /* optional color */
-}
-
-.degree-info {
-  display: flex;
-  flex-direction: column; /* put degree and university vertically */
+  font-size: 20px;
+  margin-right: 8px; /* small gap between icon and degree text */
+  color: #007f5f; /* optional greenish color */
 }
 
 .degree {
@@ -207,6 +205,7 @@ header {
 .university-name {
   font-size: 1rem;
   color: #666;
+  margin-left: 28px; /* align university text slightly under degree text */
 }
 
 /* Interests Section */
