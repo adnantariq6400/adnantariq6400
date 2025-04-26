@@ -44,8 +44,8 @@ header {
 }
 
 .logo {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -256,7 +256,7 @@ footer {
 
 .bio-text {
   flex: 1;
-  min-width: 300px;
+  min-width: 600px;
   line-height: 1.6;
   font-size: 1rem;
   color: #fefefe;
@@ -265,15 +265,24 @@ footer {
 /* Education & Interests Section */
 .education-interests-container {
   display: flex;
-  gap: 40px;
-  margin-top: 40px;
-  flex-wrap: wrap;
+  justify-content: center; /* Center the columns */
+  gap: 60px; /* Reduced from 40px to bring sections closer */
+  margin-top: 30px; /* Reduced top margin */
+  flex-wrap: wrap
 }
 
 .education-section, .interests-section {
-  flex: 1;
+  flex: 0 1 400px; /* More control over column widths */
   min-width: 300px;
+  background: rgba(255, 255, 255, 0.1); /* Optional subtle background */
+  padding: 20px;
+  border-radius: 8px;
 }
+/* For mobile view */
+@media (max-width: 768px) {
+  .education-interests-container {
+    gap: 30px;
+  }
 
 .education-section h2, .interests-section h2 {
   margin-bottom: 20px;
@@ -310,4 +319,8 @@ footer {
   display: inline-block;
   width: 1em;
   margin-left: -1em;
+}
+.education-section, .interests-section {
+  flex: 1 1 100%;
+}
 }
