@@ -320,7 +320,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
-  margin: 2rem 0;
+  margin: 5rem 0 2rem;
   align-items: flex-start;
 }
 
