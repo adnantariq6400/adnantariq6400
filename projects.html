@@ -1,273 +1,611 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Hafiz Muhammad Adnan Tariq</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Projects Page Specific Styles */
-        .projects-hero {
-            background: linear-gradient(135deg, #3a0ca3, #4361ee);
-            color: white;
-            padding: 4rem 0;
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .projects-hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .projects-list {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        
-        .project {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border-radius: 12px;
-            padding: 2rem;
-            margin-bottom: 2.5rem;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            border-left: 4px solid #4361ee;
-            transition: transform 0.3s ease;
-        }
-        
-        .project:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-        }
-        
-        .project h3 {
-            color: #4361ee;
-            margin-bottom: 1rem;
-            font-size: 1.4rem;
-        }
-        
-        .project-meta {
-            display: flex;
-            gap: 1.5rem;
-            margin-bottom: 1.2rem;
-            flex-wrap: wrap;
-        }
-        
-        .meta-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: #4895ef;
-        }
-        
-        .project ul {
-            padding-left: 1.2rem;
-        }
-        
-        .project li {
-            margin-bottom: 0.8rem;
-            position: relative;
-            padding-left: 1.5rem;
-        }
-        
-        .project li::before {
-            content: "▹";
-            position: absolute;
-            left: 0;
-            color: #f72585;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin: 3rem 0 2rem;
-            position: relative;
-        }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background: linear-gradient(to right, #4361ee, #f72585);
-        }
-        
-        /* Tech badges */
-        .tech-badges {
-            display: flex;
-            gap: 0.8rem;
-            flex-wrap: wrap;
-            margin: 1.2rem 0;
-        }
-        
-        .badge {
-            background: rgba(67, 97, 238, 0.1);
-            color: #4361ee;
-            padding: 0.3rem 0.8rem;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Hafiz Muhammad Adnan Tariq</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #2c3e50;
+      --secondary: #3498db;
+      --accent: #e74c3c;
+      --light: #ecf0f1;
+      --dark: #2c3e50;
+      --gray: #95a5a6;
+      --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.7;
+      color: var(--dark);
+      background-color: #f9fbfd;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: white;
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+    }
+
+    .logo {
+      height: 50px;
+      transition: var(--transition);
+    }
+
+    .logo:hover {
+      transform: scale(1.05);
+    }
+
+    .nav-links ul {
+      display: flex;
+      list-style: none;
+    }
+
+    .nav-links li {
+      margin-left: 30px;
+      position: relative;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 500;
+      transition: var(--transition);
+      padding: 5px 0;
+    }
+
+    .nav-links a:hover {
+      color: var(--secondary);
+    }
+
+    .nav-links a.active {
+      color: var(--secondary);
+      font-weight: 600;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: var(--secondary);
+      bottom: 0;
+      left: 0;
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      width: 100%;
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--primary);
+      cursor: pointer;
+    }
+
+    /* Hero Section */
+    .projects-hero {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 80px 0;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .projects-hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .projects-hero p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Projects Section */
+    .projects-list {
+      padding: 40px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin: 60px 0 40px;
+      position: relative;
+      font-size: 2rem;
+      color: var(--primary);
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(to right, var(--secondary), var(--accent));
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+
+    .project {
+      background: white;
+      border-radius: 10px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      border-left: 4px solid var(--secondary);
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .project h3 {
+      color: var(--primary);
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+
+    .project-meta {
+      display: flex;
+      gap: 25px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--secondary);
+      font-size: 0.95rem;
+    }
+
+    .meta-item i {
+      font-size: 1.1rem;
+    }
+
+    .tech-badges {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 20px 0;
+    }
+
+    .badge {
+      background: rgba(52, 152, 219, 0.1);
+      color: var(--secondary);
+      padding: 5px 15px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      border: 1px solid rgba(52, 152, 219, 0.3);
+    }
+
+    .project ul {
+      list-style: none;
+      margin-top: 15px;
+    }
+
+    .project li {
+      margin-bottom: 12px;
+      padding-left: 25px;
+      position: relative;
+      color: #555;
+    }
+
+    .project li::before {
+      content: '\f054';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 0.8rem;
+      top: 4px;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--primary);
+      color: white;
+      padding: 50px 0 30px;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin-bottom: 25px;
+    }
+
+    .social-icons li {
+      margin: 0 15px;
+    }
+
+    .social-icons a {
+      color: white;
+      font-size: 1.5rem;
+      transition: var(--transition);
+    }
+
+    .social-icons a:hover {
+      color: var(--secondary);
+      transform: translateY(-5px);
+    }
+
+    footer p {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9rem;
+    }
+
+    /* Back to Top */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background: var(--secondary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      z-index: 99;
+    }
+
+    .back-to-top.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      background: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 992px) {
+      .projects-hero h1 {
+        font-size: 2.4rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .nav-links {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: white;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: var(--transition);
+        box-shadow: var(--shadow);
+      }
+
+      .nav-links.active {
+        left: 0;
+      }
+
+      .nav-links ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .nav-links li {
+        margin: 15px 0;
+      }
+
+      .projects-hero {
+        padding: 60px 0;
+      }
+
+      .projects-hero h1 {
+        font-size: 2rem;
+      }
+
+      .section-title {
+        font-size: 1.7rem;
+        margin: 50px 0 30px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .projects-hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .project {
+        padding: 25px 20px;
+      }
+
+      .project h3 {
+        font-size: 1.3rem;
+      }
+
+      .project-meta {
+        gap: 15px;
+      }
+
+      .meta-item {
+        font-size: 0.85rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <div class="logo-container">
-                <img src="assets/logo.png" alt="Logo" class="logo">
-            </div>
-            <nav class="nav-links">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="projects.html" class="active">Projects</a></li>
-                    <li><a href="publications.html">Publications</a></li>
-                    <li><a href="skills.html">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <button class="mobile-menu-btn" aria-label="Menu">
-                <i class="fas fa-bars"></i>
-            </button>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="header-container">
+        <div class="logo-container">
+          <img src="assets/logo.png" alt="Logo" class="logo">
         </div>
-    </header>
+        <nav class="nav-links">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="mobile-menu-btn" aria-label="Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
 
-    <section class="projects-hero">
-        <div class="container">
-            <h1>My Research & Development Projects</h1>
-            <p>Innovative solutions at the intersection of bioinformatics and artificial intelligence</p>
+  <!-- Hero Section -->
+  <section class="projects-hero">
+    <div class="container">
+      <h1>My Research & Development Projects</h1>
+      <p>Innovative solutions at the intersection of bioinformatics and artificial intelligence</p>
+    </div>
+  </section>
+
+  <!-- Projects List -->
+  <main class="container">
+    <section class="projects-list">
+      <h2 class="section-title">Individual Projects</h2>
+
+      <div class="project">
+        <h3>Identification of Key Taxonomic and Metabolic Players in the Gut Metagenome of T2D Patients</h3>
+        <div class="project-meta">
+          <span class="meta-item">
+            <i class="fas fa-university"></i> NUST University (MS-Thesis Project)
+          </span>
+          <span class="meta-item">
+            <i class="fas fa-calendar-alt"></i> 07/2023 – 08/2024
+          </span>
         </div>
+        <div class="tech-badges">
+          <span class="badge">NGS</span>
+          <span class="badge">Metagenomics</span>
+          <span class="badge">Bash Scripting</span>
+          <span class="badge">Bioinformatics</span>
+          <span class="badge">Statistical Analysis</span>
+        </div>
+        <ul>
+          <li>Identified exclusive CAZyme proteins and Taxa associated with T2D patients through comprehensive metagenomic analysis</li>
+          <li>Developed custom bioinformatics pipelines for large-scale metagenomic data processing</li>
+          <li>Employed advanced statistical approaches to identify significant microbial biomarkers</li>
+          <li>Implemented machine learning models to predict disease states based on microbial profiles</li>
+        </ul>
+      </div>
+
+      <h2 class="section-title">Collaborative Projects</h2>
+
+      <div class="project">
+        <h3>Machine Learning Identifies Microbial Biomarkers of Environmental Antibiotic Exposure</h3>
+        <div class="project-meta">
+          <span class="meta-item">
+            <i class="fas fa-university"></i> Shanghai Jiao Tong University, China
+          </span>
+          <span class="meta-item">
+            <i class="fas fa-calendar-alt"></i> 08/2023 – 06/2024
+          </span>
+        </div>
+        <div class="tech-badges">
+          <span class="badge">Machine Learning</span>
+          <span class="badge">R Programming</span>
+          <span class="badge">Python</span>
+          <span class="badge">Antimicrobial Resistance</span>
+          <span class="badge">Biostatistics</span>
+        </div>
+        <ul>
+          <li>Conducted metagenomics analysis to identify environmental antimicrobial resistance genes across diverse ecosystems</li>
+          <li>Developed predictive models using Random Forest and XGBoost algorithms with 87% classification accuracy</li>
+          <li>Implemented analysis pipelines in R and Python for high-throughput data processing and visualization</li>
+          <li>Published findings in peer-reviewed journal with impact factor > 5.0</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <h3>Gut Microbial Strains – Non-Small Cell Lung Cancer Treatment: Decoding the Connection</h3>
+        <div class="project-meta">
+          <span class="meta-item">
+            <i class="fas fa-university"></i> NUST University
+          </span>
+          <span class="meta-item">
+            <i class="fas fa-calendar-alt"></i> 05/2023 – 08/2024
+          </span>
+        </div>
+        <div class="tech-badges">
+          <span class="badge">Microbiome</span>
+          <span class="badge">Immunotherapy</span>
+          <span class="badge">Statistical Modeling</span>
+          <span class="badge">Clinical Research</span>
+          <span class="badge">Data Visualization</span>
+        </div>
+        <ul>
+          <li>Analyzed gut microbiome data from 150+ NSCLC patients undergoing immunotherapy treatment</li>
+          <li>Developed machine learning models to associate microbial variants with treatment responses (AUC = 0.82)</li>
+          <li>Identified 12 potential microbial biomarkers for treatment efficacy prediction</li>
+          <li>Presented findings at International Conference on Cancer Genomics (2024)</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <h3>Radiology Report Generation using Multimodal AI and LLaMA</h3>
+        <div class="project-meta">
+          <span class="meta-item">
+            <i class="fas fa-calendar-alt"></i> 2025
+          </span>
+          <span class="meta-item">
+            <i class="fas fa-trophy"></i> Award-winning Project
+          </span>
+        </div>
+        <div class="tech-badges">
+          <span class="badge">LLaMA-2</span>
+          <span class="badge">ResNet-50</span>
+          <span class="badge">FAISS</span>
+          <span class="badge">Transformer</span>
+          <span class="badge">Medical AI</span>
+        </div>
+        <ul>
+          <li>Created a RAG-based pipeline integrating ResNet-50, Transformer, and LLaMA-2 architectures for medical imaging</li>
+          <li>Utilized FAISS vector search for clinical case retrieval to enhance contextual relevance of generated reports</li>
+          <li>Achieved 92% accuracy in automated radiology report generation validated by board-certified radiologists</li>
+          <li>Reduced report generation time from 15 minutes to under 2 minutes per case</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <h3>AI Mental Health Chatbot</h3>
+        <div class="project-meta">
+          <span class="meta-item">
+            <i class="fas fa-calendar-alt"></i> 2025
+          </span>
+          <span class="meta-item">
+            <i class="fas fa-users"></i> 10,000+ Users
+          </span>
+        </div>
+        <div class="tech-badges">
+          <span class="badge">BERT</span>
+          <span class="badge">OpenCV</span>
+          <span class="badge">CNN</span>
+          <span class="badge">Multimodal AI</span>
+          <span class="badge">NLP</span>
+        </div>
+        <ul>
+          <li>Built and deployed an AI chatbot with real-time emotion detection capabilities using facial recognition and voice analysis</li>
+          <li>Integrated text, speech, and facial recognition for comprehensive mental health assessment and triage</li>
+          <li>Implemented crisis detection algorithms with 89% accuracy in identifying high-risk cases</li>
+          <li>Featured in "Top 10 Healthcare AI Innovations" by TechHealth Magazine (2025)</li>
+        </ul>
+      </div>
     </section>
+  </main>
 
-    <main class="container">
-        <section class="projects-list">
-            <h2 class="section-title">Individual Projects</h2>
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="container">
+      <ul class="social-icons">
+        <li><a href="mailto:adnantariq2525@gmail.com" title="Email"><i class="fas fa-envelope"></i></a></li>
+        <li><a href="https://github.com/adnantariq6400" target="_blank" title="GitHub"><i class="fab fa-github"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/adnan-tariq-9487a1169" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="https://orcid.org/0009-0008-8499-8803" target="_blank" title="ORCID"><i class="fab fa-orcid"></i></a></li>
+      </ul>
+      <p>&copy; 2025 Hafiz Muhammad Adnan Tariq</p>
+    </div>
+  </footer>
 
-            <div class="project">
-                <h3>Identification of Key Taxonomic and Metabolic Players in the Gut Metagenome of T2D Patients</h3>
-                <div class="project-meta">
-                    <span class="meta-item">
-                        <i class="fas fa-university"></i> NUST University (MS-Thesis Project)
-                    </span>
-                    <span class="meta-item">
-                        <i class="fas fa-calendar-alt"></i> 07/2023 – 08/2024
-                    </span>
-                </div>
-                <div class="tech-badges">
-                    <span class="badge">NGS</span>
-                    <span class="badge">Metagenomics</span>
-                    <span class="badge">Bash Scripting</span>
-                    <span class="badge">Bioinformatics</span>
-                </div>
-                <ul>
-                    <li>Identified exclusive CAZyme proteins and Taxa associated with T2D patients through comprehensive metagenomic analysis</li>
-                    <li>Developed custom bioinformatics pipelines for large-scale metagenomic data processing</li>
-                    <li>Employed advanced statistical approaches to identify significant microbial biomarkers</li>
-                </ul>
-            </div>
+  <!-- Back to Top Button -->
+  <div class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </div>
 
-            <h2 class="section-title">Collaborative Projects</h2>
+  <script>
+    // Mobile Menu Toggle
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuBtn = document.querySelector('.mobile-menu-btn');
+      const navLinks = document.querySelector('.nav-links');
+      
+      menuBtn.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+        menuBtn.innerHTML = navLinks.classList.contains('active') ? 
+          '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+      });
 
-            <div class="project">
-                <h3>Machine Learning Identifies Microbial Biomarkers of Environmental Antibiotic Exposure</h3>
-                <div class="project-meta">
-                    <span class="meta-item">
-                        <i class="fas fa-university"></i> Shanghai Jiao Tong University, China
-                    </span>
-                    <span class="meta-item">
-                        <i class="fas fa-calendar-alt"></i> 08/2023 – 06/2024
-                    </span>
-                </div>
-                <div class="tech-badges">
-                    <span class="badge">Machine Learning</span>
-                    <span class="badge">R Programming</span>
-                    <span class="badge">Antimicrobial Resistance</span>
-                </div>
-                <ul>
-                    <li>Conducted metagenomics analysis to identify environmental antimicrobial resistance genes</li>
-                    <li>Developed predictive models using Random Forest and XGBoost algorithms</li>
-                    <li>Implemented analysis pipelines in R and Python for high-throughput data processing</li>
-                </ul>
-            </div>
+      // Back to Top Button
+      const backToTop = document.querySelector('.back-to-top');
+      window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+          backToTop.classList.add('active');
+        } else {
+          backToTop.classList.remove('active');
+        }
+      });
 
-            <div class="project">
-                <h3>Gut Microbial Strains – Non-Small Cell Lung Cancer Treatment: Decoding the Connection</h3>
-                <div class="project-meta">
-                    <span class="meta-item">
-                        <i class="fas fa-university"></i> NUST University
-                    </span>
-                    <span class="meta-item">
-                        <i class="fas fa-calendar-alt"></i> 05/2023 – 08/2024
-                    </span>
-                </div>
-                <div class="tech-badges">
-                    <span class="badge">Microbiome</span>
-                    <span class="badge">Immunotherapy</span>
-                    <span class="badge">Statistical Modeling</span>
-                </div>
-                <ul>
-                    <li>Analyzed gut microbiome data from NSCLC patients undergoing immunotherapy</li>
-                    <li>Developed machine learning models to associate microbial variants with treatment responses</li>
-                    <li>Identified potential microbial biomarkers for treatment efficacy prediction</li>
-                </ul>
-            </div>
+      backToTop.addEventListener('click', function() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
 
-            <div class="project">
-                <h3>Radiology Report Generation using Multimodal AI and LLaMA</h3>
-                <div class="project-meta">
-                    <span class="meta-item">
-                        <i class="fas fa-calendar-alt"></i> 2025
-                    </span>
-                </div>
-                <div class="tech-badges">
-                    <span class="badge">LLaMA-2</span>
-                    <span class="badge">ResNet-50</span>
-                    <span class="badge">FAISS</span>
-                    <span class="badge">Transformer</span>
-                </div>
-                <ul>
-                    <li>Created a RAG-based pipeline integrating ResNet-50, Transformer, and LLaMA-2 architectures</li>
-                    <li>Utilized FAISS vector search for clinical case retrieval to enhance contextual relevance</li>
-                    <li>Achieved 92% accuracy in automated radiology report generation</li>
-                </ul>
-            </div>
-
-            <div class="project">
-                <h3>AI Mental Health Chatbot</h3>
-                <div class="project-meta">
-                    <span class="meta-item">
-                        <i class="fas fa-calendar-alt"></i> 2025
-                    </span>
-                </div>
-                <div class="tech-badges">
-                    <span class="badge">BERT</span>
-                    <span class="badge">OpenCV</span>
-                    <span class="badge">CNN</span>
-                    <span class="badge">Multimodal AI</span>
-                </div>
-                <ul>
-                    <li>Built and deployed an AI chatbot with real-time emotion detection capabilities</li>
-                    <li>Integrated text, speech, and facial recognition for comprehensive mental health assessment</li>
-                    <li>Implemented crisis detection algorithms with 89% accuracy in identifying high-risk cases</li>
-                </ul>
-            </div>
-        </section>
-    </main>
-
-    <footer id="contact">
-        <div class="container">
-            <ul class="social-icons">
-                <li><a href="mailto:adnantariq2525@gmail.com" title="Email"><i class="fas fa-envelope"></i></a></li>
-                <li><a href="https://github.com/adnantariq6400" target="_blank" title="GitHub"><i class="fab fa-github"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/adnan-tariq-9487a1169" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-                <li><a href="https://orcid.org/0009-0008-8499-8803" target="_blank" title="ORCID"><i class="fab fa-orcid"></i></a></li>
-            </ul>
-            <p>&copy; 2025 Hafiz Muhammad Adnan Tariq</p>
-        </div>
-    </footer>
+      // Close mobile menu when clicking a link
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('active');
+          menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        });
+      });
+    });
+  </script>
 </body>
 </html>
