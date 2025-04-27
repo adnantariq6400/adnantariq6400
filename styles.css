@@ -226,11 +226,17 @@ header {
 }
 
 /* Content Styles */
+/* Remove any padding/margin on parent elements */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
 .banner {
-  width: 100vw; /* Full viewport width */
-  margin-left: calc(-50vw + 50%); /* Centers while allowing full bleed */
-  overflow: hidden; /* Prevents horizontal scroll */
-  margin-bottom: 2rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .banner img {
@@ -238,9 +244,9 @@ header {
   height: auto;
   max-height: 250px;
   object-fit: cover;
-  border-radius: 0; /* Remove if you want squared edges */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  display: block; /* Removes bottom spacing */
+  border-radius: 0; /* Remove if you want sharp edges */
+  box-shadow: none; /* Remove shadow for true edge-to-edge */
+  display: block;
 }
 
 /* Footer Styles */
