@@ -6,67 +6,200 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publications - Hafiz Muhammad Adnan Tariq</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Publications Page Specific Styles */
+        .publications-hero {
+            background: linear-gradient(135deg, #3a0ca3, #7209b7);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .publications-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .publications-list {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .publication {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            border-left: 4px solid #f72585;
+            transition: transform 0.3s ease;
+        }
+        
+        .publication:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+        }
+        
+        .publication-title {
+            color: #4895ef;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            line-height: 1.4;
+        }
+        
+        .publication-authors {
+            font-style: italic;
+            margin-bottom: 0.8rem;
+            color: #adb5bd;
+        }
+        
+        .publication-journal {
+            font-weight: 600;
+            color: #f72585;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .publication-meta {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1.2rem;
+            flex-wrap: wrap;
+        }
+        
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #4895ef;
+        }
+        
+        .doi-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #4361ee;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .doi-link:hover {
+            color: #f72585;
+            text-decoration: underline;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin: 3rem 0 2rem;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(to right, #4361ee, #f72585);
+        }
+    </style>
 </head>
 <body>
-        <!-- Header goes here -->
-        <main class="container" style="padding-top: 20px;"> <!-- Added padding -->
-        <header>
-            <div class="header-container">
-                <div class="logo-container">
-                  <img src="assets/logo.png" alt="Logo" class="logo">
-                </div>
-                <nav class="nav-links">
-                  <ul>
-                    <li><a href="index.html">Home</a></li>
-      <ul>
-        <li><a href="#education">Education</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<!--    <header>
-        <div class="container">
-            <h1>Publications</h1>
-            <nav>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="assets/logo.png" alt="Logo" class="logo">
+            </div>
+            <nav class="nav-links">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="publications.html" class="active">Publications</a></li>
                     <li><a href="skills.html">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
-    </header> -->
+    </header>
 
-    <section class="publications-list">
-        <h2>Selected Publications</h2>
-        <ul>
-            <li>
-                Tariq, H.M.A., Khan, N.Y., Manzoor, H., & Kayani, M.U.R. (2025). <strong>"Exploring the Impact of Type 2 Diabetes and Glucose-Lowering Drugs on Gut Microbiome Dynamics"</strong>. <em>Springer Nature Discover Medicine</em>. <br>
-                DOI: <a href="https://doi.org/10.1007/s44337-025-00241-9" target="_blank">https://doi.org/10.1007/s44337-025-00241-9</a> <br>
-                <em>Published: 02/2025</em>
-            </li>
-            <li>
-                Raziq, M.F., Tariq, H.M.A., Khan, N., Manzoor, H., Rafiq, M., Rasool, S., Kayani, M.U.R., & Huang, L. (2025). <strong>"Prioritizing gut microbial SNPs linked to immunotherapy outcomes in NSCLC patients by integrative bioinformatics analysis"</strong>. <em>Journal of Translational Medicine</em>. <br>
-                DOI: <a href="https://doi.org/10.1186/s12967-025-06370-0" target="_blank">https://doi.org/10.1186/s12967-025-06370-0</a> <br>
-                <em>Published: 03/2025</em>
-            </li>
-        </ul>
+    <section class="publications-hero">
+        <div class="container">
+            <h1>Research Publications</h1>
+            <p>Peer-reviewed contributions to scientific literature in bioinformatics and microbiome research</p>
+        </div>
     </section>
+
+    <main class="container">
+        <section class="publications-list">
+            <h2 class="section-title">Selected Publications</h2>
+
+            <div class="publication">
+                <h3 class="publication-title">Exploring the Impact of Type 2 Diabetes and Glucose-Lowering Drugs on Gut Microbiome Dynamics</h3>
+                <div class="publication-authors">Tariq, H.M.A., Khan, N.Y., Manzoor, H., & Kayani, M.U.R.</div>
+                <div class="publication-journal">
+                    <i class="fas fa-book-open"></i> Springer Nature Discover Medicine
+                </div>
+                <div class="publication-meta">
+                    <span class="meta-item">
+                        <i class="fas fa-calendar-alt"></i> Published: February 2025
+                    </span>
+                    <span class="meta-item">
+                        <i class="fas fa-external-link-alt"></i> 
+                        <a href="https://doi.org/10.1007/s44337-025-00241-9" target="_blank" class="doi-link">
+                            DOI: 10.1007/s44337-025-00241-9
+                        </a>
+                    </span>
+                    <span class="meta-item">
+                        <i class="fas fa-tags"></i> Microbiome, Diabetes, Metagenomics
+                    </span>
+                </div>
+            </div>
+
+            <div class="publication">
+                <h3 class="publication-title">Prioritizing gut microbial SNPs linked to immunotherapy outcomes in NSCLC patients by integrative bioinformatics analysis</h3>
+                <div class="publication-authors">Raziq, M.F., Tariq, H.M.A., Khan, N., Manzoor, H., Rafiq, M., Rasool, S., Kayani, M.U.R., & Huang, L.</div>
+                <div class="publication-journal">
+                    <i class="fas fa-book-open"></i> Journal of Translational Medicine
+                </div>
+                <div class="publication-meta">
+                    <span class="meta-item">
+                        <i class="fas fa-calendar-alt"></i> Published: March 2025
+                    </span>
+                    <span class="meta-item">
+                        <i class="fas fa-external-link-alt"></i> 
+                        <a href="https://doi.org/10.1186/s12967-025-06370-0" target="_blank" class="doi-link">
+                            DOI: 10.1186/s12967-025-06370-0
+                        </a>
+                    </span>
+                    <span class="meta-item">
+                        <i class="fas fa-tags"></i> Immunotherapy, Microbiome, Bioinformatics
+                    </span>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer id="contact">
         <div class="container">
-          <ul class="social-icons">
-            <li><a href="mailto:adnantariq2525@gmail.com" title="Email"><i class="fas fa-envelope"></i></a></li>
-            <li><a href="https://github.com/adnantariq6400" target="_blank" title="GitHub"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/adnan-tariq-9487a1169" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://orcid.org/0009-0008-8499-8803" target="_blank" title="ORCID"><i class="fab fa-orcid"></i></a></li>
-          </ul>
-          <p>&copy; 2025 Hafiz Muhammad Adnan Tariq</p>
+            <ul class="social-icons">
+                <li><a href="mailto:adnantariq2525@gmail.com" title="Email"><i class="fas fa-envelope"></i></a></li>
+                <li><a href="https://github.com/adnantariq6400" target="_blank" title="GitHub"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/adnan-tariq-9487a1169" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://orcid.org/0009-0008-8499-8803" target="_blank" title="ORCID"><i class="fab fa-orcid"></i></a></li>
+            </ul>
+            <p>&copy; 2025 Hafiz Muhammad Adnan Tariq</p>
         </div>
+    </footer>
 </body>
 </html>
