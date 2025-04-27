@@ -168,7 +168,7 @@ header {
   z-index: 1001;
 }
 
-/* Mobile Menu Styles */
+/* Mobile Menu Styles 
 @media (max-width: 992px) {
   .nav-links ul {
     gap: 15px;
@@ -223,7 +223,6 @@ header {
   body.menu-open {
     overflow: hidden;
   }
-}
 
 /* Content Styles */
 /* Remove any padding/margin on parent elements
@@ -244,8 +243,8 @@ body, html {
   height: auto;
   max-height: 250px;
   object-fit: cover;
-  border-radius: 0; /* Remove if you want sharp edges */
-  box-shadow: none; /* Remove shadow for true edge-to-edge
+  border-radius: 0; /* Remove if you want sharp edges 
+  box-shadow: none; /* Remove shadow for true edge-to-edge 
   display: block;
 }*/
 
@@ -263,7 +262,7 @@ footer {
   display: flex;
   justify-content: center;
   gap: 20px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   padding: 0; /* Remove default padding */
   list-style: none; /* Remove bullets */
 }
@@ -442,4 +441,5 @@ body > header:first-child {
 /* Only apply body padding to non-homepages */
 body:not(.home-page) {
   padding-top: 80px;
+}
 }
