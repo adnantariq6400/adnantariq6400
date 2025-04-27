@@ -168,7 +168,7 @@ header {
   z-index: 1001;
 }
 
-/* Mobile Menu Styles */
+/* Mobile Menu Styles
 @media (max-width: 992px) {
   .nav-links ul {
     gap: 15px;
@@ -244,10 +244,9 @@ body, html {
   height: auto;
   max-height: 250px;
   object-fit: cover;
-  border-radius: 0; /* Remove if you want sharp edges */
-  box-shadow: none; /* Remove shadow for true edge-to-edge
-  display: block;
-}*/
+  border-radius: 0; /* Remove if you want sharp edges 
+  box-shadow: none;/* Remove shadow for true edge-to-edge
+  display: block; */
 
 /* Footer Styles */
 footer {
