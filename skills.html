@@ -5,11 +5,195 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skills - Hafiz Muhammad Adnan Tariq</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            height: 50px;
+        }
+        
+        .nav-links ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 25px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+            background-color: rgba(52, 152, 219, 0.1);
+        }
+        
+        /* Skills Section */
+        .skills-list {
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .skills-list h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: var(--secondary-color);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .skills-list h2::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background: var(--primary-color);
+            bottom: -10px;
+            left: 25%;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .skill-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: left;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .skill-card i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .skill-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+        
+        .skill-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        /* Footer Styles */
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin-bottom: 20px;
+        }
+        
+        .social-icons li {
+            margin: 0 15px;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+        
+        .social-icons a:hover {
+            color: var(--primary-color);
+        }
+        
+        footer p {
+            text-align: center;
+            margin-top: 20px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+            }
+            
+            .nav-links ul {
+                margin-top: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .nav-links li {
+                margin: 5px 10px;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Header goes here -->
-    <main class="container" style="padding-top: 20px;"> <!-- Added padding -->
+    <main class="container">
         <header>
             <div class="header-container">
                 <div class="logo-container">
@@ -18,55 +202,68 @@
                 <nav class="nav-links">
                   <ul>
                     <li><a href="index.html">Home</a></li>
-      <ul>
-        
-        <li><a href="#education">Education</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<!--    <header>
-        <div class="container">
-            <h1>Skills</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="projects.html">Projects</a></li>
                     <li><a href="publications.html">Publications</a></li>
                     <li><a href="skills.html">Skills</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header> -->
+                    <li><a href="#contact">Contact</a></li>
+                  </ul>
+                </nav>
+            </div>
+        </header>
 
-    <section class="skills-list">
-        <h2>My Skills</h2>
-        <ul>
-            <li>Bioinformatics</li>
-            <li>Metagenomics</li>
-            <li>Next-Generation Sequencing (NGS) Analysis</li>
-            <li>Machine Learning & AI</li>
-            <li>Data Visualization</li>
-            <li>R, Python, and Bash Scripting</li>
-            <!-- Add more skills as needed -->
-        </ul>
-    </section>
+        <section class="skills-list">
+            <h2>My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fas fa-dna"></i>
+                    <h3>Bioinformatics</h3>
+                    <p>Expertise in genomic data analysis, sequence alignment, and biological database management.</p>
+                </div>
+                
+                <div class="skill-card">
+                    <i class="fas fa-microscope"></i>
+                    <h3>Metagenomics</h3>
+                    <p>Analysis of microbial communities through DNA sequencing and computational tools.</p>
+                </div>
+                
+                <div class="skill-card">
+                    <i class="fas fa-code"></i>
+                    <h3>NGS Analysis</h3>
+                    <p>Processing and interpreting Next-Generation Sequencing data with various bioinformatics pipelines.</p>
+                </div>
+                
+                <div class="skill-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>Machine Learning & AI</h3>
+                    <p>Developing predictive models and algorithms for biological data analysis.</p>
+                </div>
+                
+                <div class="skill-card">
+                    <i class="fas fa-chart-bar"></i>
+                    <h3>Data Visualization</h3>
+                    <p>Creating insightful visual representations of complex biological datasets.</p>
+                </div>
+                
+                <div class="skill-card">
+                    <i class="fas fa-terminal"></i>
+                    <h3>Programming</h3>
+                    <p>Proficient in R, Python, and Bash scripting for data analysis and automation.</p>
+                </div>
+            </div>
+        </section>
 
-    <footer id="contact">
-        <div class="container">
-          <ul class="social-icons">
-            <li><a href="mailto:adnantariq2525@gmail.com" title="Email"><i class="fas fa-envelope"></i></a></li>
-            <li><a href="https://github.com/adnantariq6400" target="_blank" title="GitHub"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/adnan-tariq-9487a1169" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://orcid.org/0009-0008-8499-8803" target="_blank" title="ORCID"><i class="fab fa-orcid"></i></a></li>
-          </ul>
-          <p>&copy; 2025 Hafiz Muhammad Adnan Tariq</p>
-        </div>
-    </footer>
+        <footer id="contact">
+            <div class="container">
+              <ul class="social-icons">
+                <li><a href="mailto:adnantariq2525@gmail.com" title="Email"><i class="fas fa-envelope"></i></a></li>
+                <li><a href="https://github.com/adnantariq6400" target="_blank" title="GitHub"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/adnan-tariq-9487a1169" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://orcid.org/0009-0008-8499-8803" target="_blank" title="ORCID"><i class="fab fa-orcid"></i></a></li>
+              </ul>
+              <p>&copy; 2025 Hafiz Muhammad Adnan Tariq</p>
+            </div>
+        </footer>
+    </main>
 </body>
 </html>
-
