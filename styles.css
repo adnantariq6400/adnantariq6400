@@ -226,14 +226,21 @@ header {
 }
 
 /* Content Styles */
+.banner {
+  width: 100vw; /* Full viewport width */
+  margin-left: calc(-50vw + 50%); /* Centers while allowing full bleed */
+  overflow: hidden; /* Prevents horizontal scroll */
+  margin-bottom: 2rem;
+}
+
 .banner img {
   width: 100%;
   height: auto;
   max-height: 250px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 0; /* Remove if you want squared edges */
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  margin-bottom: 2rem;
+  display: block; /* Removes bottom spacing */
 }
 
 /* Footer Styles */
