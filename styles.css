@@ -419,25 +419,22 @@ footer {
   flex: 1 1 100%;
 }
 }
-/* ===== NON-HOMEPAGE HEADER FIX ===== */
-/* Only applies to pages that aren't homepage */
-body:not(.home-page) header {
+/* NON-HOMEPAGE HEADER FIX (ONLY FOR OTHER PAGES) */
+body > header:first-child {
   position: fixed;
-  top: 0 !important;
-  left: 0;
-  right: 0;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-body:not(.home-page) {
-  padding-top: 80px !important;
-  overflow-x: hidden;
-}
-
-/* Fix footer for non-homepages */
-body:not(.home-page) footer {
+  top: 0;
   left: 0;
   right: 0;
   width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 1000;
+  height: 80px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Only apply body padding to non-homepages */
+body:not(.home-page) {
+  padding-top: 80px;
 }
