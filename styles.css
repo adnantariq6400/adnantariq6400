@@ -254,7 +254,9 @@ footer {
   padding: 0; /* Remove default padding */
   list-style: none; /* Remove bullets */
 }
-
+.social-icons li {
+  display: inline-block; /* Ensure proper spacing */
+}
 .social-icons a {
   color: #000;
   font-size: 1.5rem;
