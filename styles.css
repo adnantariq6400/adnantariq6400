@@ -243,6 +243,7 @@ footer {
   padding: 20px 0;
   text-align: center;
   margin-top: 3rem;
+  width: 100%;
 }
 
 .social-icons {
@@ -250,6 +251,8 @@ footer {
   justify-content: center;
   gap: 20px;
   margin-bottom: 15px;
+  padding: 0; /* Remove default padding */
+  list-style: none; /* Remove bullets */
 }
 
 .social-icons a {
