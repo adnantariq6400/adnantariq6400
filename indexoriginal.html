@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hafiz Muhammad Adnan Tariq</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <body class="home-page"> <!-- Add this class -->
+    <!-- Keep existing perfect header -->
+    <!-- Header goes here -->
+    <main class="container" style="padding-top: 20px;"> <!-- Added padding -->
+  <header>
+    <div class="header-container">
+      <div class="logo-container">
+        <img src="assets/logo.png" alt="Logo" class="logo">
+      </div>
+      <nav class="nav-links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+<ul>
+          <li><a href="#education">Education</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="mobile-menu-btn" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+<!--  <div class="banner">
+    <img src="assets/images/banner.jpg" alt="Bioinformatics Banner">
+  </div> -->
+
+  <main class="container">
+    <section class="bio-section">
+      <div class="profile-container">
+        <img src="profile.jpg" alt="Adnan Tariq" class="profile-img">
+        <div class="profile-details">
+          <h2>Adnan Tariq</h2>
+          <p><strong>MS Bioinformatics</strong></p>
+          <p>NUST, Islamabad</p>
+        </div>
+      </div>
+      <div class="bio-text">
+        <p>
+          I'm a Bioinformatics enthusiast equipped with a strong background in Bioinformatics and focus on Microbiome–Host Interactions, Metagenomic Analysis, and NGS Analysis. Dedicated researcher with expertise in Linux, Bash Scripting, Machine Learning, and Programming (Python, R). Passionate about leveraging computational methods to explore microbial communities, identify biomarkers, and develop predictive models for disease and treatment outcomes. Seeking opportunities to apply advanced bioinformatics and data science techniques to solve complex biological challenges.
+        </p>
+      </div>
+    </section>
+
+    <!-- Education & Interests Section -->
+    <section class="education-interests-container">
+      <div id="education" class="education-section">
+        <h2>Education</h2>
+        <div class="education-item">
+          <div class="degree-line">
+            <i class="fas fa-graduation-cap degree-icon"></i>
+            <span class="degree"><strong>MS in Bioinformatics</strong></span>
+          </div>
+          <div class="university-name">NUST, Islamabad (2022–2024)</div>
+        </div>
+        <div class="education-item">
+          <div class="degree-line">
+            <i class="fas fa-graduation-cap degree-icon"></i>
+            <span class="degree"><strong>BS in Bioinformatics</strong></span>
+          </div>
+          <div class="university-name">QAU, Islamabad (2017–2021)</div>
+        </div>
+      </div>
+
+      <div id="interests" class="interests-section">
+        <h2>Interests</h2>
+        <ul>
+          <li>NGS, Computational Genomics & Metagenomics</li>
+          <li>Machine Learning & AI in Bioinformatics</li>
+          <li>Microbiome & Human Health</li>
+          <li>Big Data & Cloud Computing in Bioinformatics</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="container">
+      <ul class="social-icons">
+        <li><a href="mailto:adnantariq2525@gmail.com" title="Email"><i class="fas fa-envelope"></i></a></li>
+        <li><a href="https://github.com/adnantariq6400" target="_blank" title="GitHub"><i class="fab fa-github"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/adnan-tariq-9487a1169" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="https://orcid.org/0009-0008-8499-8803" target="_blank" title="ORCID"><i class="fab fa-orcid"></i></a></li>
+      </ul>
+      <p>&copy; 2025 Hafiz Muhammad Adnan Tariq</p>
+    </div>
+  </footer>
+
+  <div class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <script>
+    // Mobile Menu Toggle
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuBtn = document.querySelector('.mobile-menu-btn');
+      const navLinks = document.querySelector('.nav-links');
+      
+      if (menuBtn && navLinks) {
+        menuBtn.addEventListener('click', function() {
+          navLinks.classList.toggle('active');
+          document.body.classList.toggle('menu-open');
+          menuBtn.innerHTML = navLinks.classList.contains('active') ? 
+            '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+      }
+
+      // Back to Top Button
+      const backToTop = document.querySelector('.back-to-top');
+      window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+          backToTop.classList.add('active');
+        } else {
+          backToTop.classList.remove('active');
+        }
+      });
+
+      backToTop.addEventListener('click', function() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>

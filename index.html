@@ -1,46 +1,389 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hafiz Muhammad Adnan Tariq</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <title>Hafiz Muhammad Adnan Tariq | Bioinformatics Specialist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    :root {
+      --primary: #2c3e50;
+      --secondary: #3498db;
+      --accent: #e74c3c;
+      --light: #ecf0f1;
+      --dark: #2c3e50;
+      --gray: #95a5a6;
+      --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.7;
+      color: var(--dark);
+      background-color: #f9fbfd;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: white;
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+    }
+
+    .logo {
+      height: 50px;
+      transition: var(--transition);
+    }
+
+    .logo:hover {
+      transform: scale(1.05);
+    }
+
+    .nav-links ul {
+      display: flex;
+      list-style: none;
+    }
+
+    .nav-links li {
+      margin-left: 30px;
+      position: relative;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 500;
+      transition: var(--transition);
+      padding: 5px 0;
+    }
+
+    .nav-links a:hover {
+      color: var(--secondary);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: var(--secondary);
+      bottom: 0;
+      left: 0;
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--primary);
+      cursor: pointer;
+    }
+
+    /* Hero Section */
+    .bio-section {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      margin: 60px 0;
+      padding: 40px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+    }
+
+    .profile-container {
+      text-align: center;
+      flex: 1;
+    }
+
+    .profile-img {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid var(--light);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    .profile-details h2 {
+      font-size: 1.8rem;
+      color: var(--primary);
+      margin-bottom: 5px;
+    }
+
+    .profile-details p {
+      color: var(--gray);
+      margin-bottom: 5px;
+    }
+
+    .bio-text {
+      flex: 2;
+    }
+
+    .bio-text p {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    /* Education & Interests */
+    .education-interests-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+
+    .education-section, .interests-section {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: var(--primary);
+      margin-bottom: 25px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      width: 60px;
+      height: 3px;
+      background: var(--secondary);
+      bottom: 0;
+      left: 0;
+    }
+
+    .education-item {
+      margin-bottom: 25px;
+      padding-left: 35px;
+      position: relative;
+    }
+
+    .degree-icon {
+      position: absolute;
+      left: 0;
+      top: 5px;
+      color: var(--secondary);
+      font-size: 1.2rem;
+    }
+
+    .degree {
+      font-size: 1.1rem;
+      color: var(--primary);
+    }
+
+    .university-name {
+      color: var(--gray);
+      margin-top: 5px;
+      font-size: 0.95rem;
+    }
+
+    .interests-section ul {
+      list-style: none;
+    }
+
+    .interests-section li {
+      margin-bottom: 15px;
+      padding-left: 30px;
+      position: relative;
+    }
+
+    .interests-section li::before {
+      content: '\f054';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--primary);
+      color: white;
+      padding: 50px 0 30px;
+      text-align: center;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin-bottom: 25px;
+    }
+
+    .social-icons li {
+      margin: 0 15px;
+    }
+
+    .social-icons a {
+      color: white;
+      font-size: 1.5rem;
+      transition: var(--transition);
+    }
+
+    .social-icons a:hover {
+      color: var(--secondary);
+      transform: translateY(-5px);
+    }
+
+    footer p {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9rem;
+    }
+
+    /* Back to Top */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background: var(--secondary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      z-index: 99;
+    }
+
+    .back-to-top.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      background: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 992px) {
+      .bio-section {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .education-interests-container {
+        grid-template-columns: 1fr;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .nav-links {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: white;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: var(--transition);
+        box-shadow: var(--shadow);
+      }
+
+      .nav-links.active {
+        left: 0;
+      }
+
+      .nav-links ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .nav-links li {
+        margin: 15px 0;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .bio-section {
+        padding: 30px 20px;
+      }
+
+      .profile-img {
+        width: 180px;
+        height: 180px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <body class="home-page"> <!-- Add this class -->
-    <!-- Keep existing perfect header -->
-    <!-- Header goes here -->
-    <main class="container" style="padding-top: 20px;"> <!-- Added padding -->
+  <!-- Header -->
   <header>
-    <div class="header-container">
-      <div class="logo-container">
-        <img src="assets/logo.png" alt="Logo" class="logo">
+    <div class="container">
+      <div class="header-container">
+        <div class="logo-container">
+          <img src="assets/logo.png" alt="Logo" class="logo">
+        </div>
+        <nav class="nav-links">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="mobile-menu-btn" aria-label="Menu">
+          <i class="fas fa-bars"></i>
+        </button>
       </div>
-      <nav class="nav-links">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-<ul>
-          <li><a href="#education">Education</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li><a href="skills.html">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <button class="mobile-menu-btn" aria-label="Menu">
-        <i class="fas fa-bars"></i>
-      </button>
     </div>
   </header>
 
-<!--  <div class="banner">
-    <img src="assets/images/banner.jpg" alt="Bioinformatics Banner">
-  </div> -->
-
+  <!-- Main Content -->
   <main class="container">
+    <!-- Bio Section -->
     <section class="bio-section">
       <div class="profile-container">
         <img src="profile.jpg" alt="Adnan Tariq" class="profile-img">
@@ -89,6 +432,7 @@
     </section>
   </main>
 
+  <!-- Footer -->
   <footer id="contact">
     <div class="container">
       <ul class="social-icons">
@@ -101,6 +445,7 @@
     </div>
   </footer>
 
+  <!-- Back to Top Button -->
   <div class="back-to-top" aria-label="Back to top">
     <i class="fas fa-arrow-up"></i>
   </div>
@@ -111,14 +456,11 @@
       const menuBtn = document.querySelector('.mobile-menu-btn');
       const navLinks = document.querySelector('.nav-links');
       
-      if (menuBtn && navLinks) {
-        menuBtn.addEventListener('click', function() {
-          navLinks.classList.toggle('active');
-          document.body.classList.toggle('menu-open');
-          menuBtn.innerHTML = navLinks.classList.contains('active') ? 
-            '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
-        });
-      }
+      menuBtn.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+        menuBtn.innerHTML = navLinks.classList.contains('active') ? 
+          '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+      });
 
       // Back to Top Button
       const backToTop = document.querySelector('.back-to-top');
@@ -134,6 +476,14 @@
         window.scrollTo({
           top: 0,
           behavior: 'smooth'
+        });
+      });
+
+      // Close mobile menu when clicking a link
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('active');
+          menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
         });
       });
     });
