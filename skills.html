@@ -58,17 +58,19 @@
            border: 3px solid #001f3f; /* Navy blue hex code */
            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
         }
-        
-        .logo-container:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
-        }
-        
         .logo {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            border-radius: 50%;
         }
+        
+        .logo-container:hover {
+           transform: rotate(15deg);
+           border-color: var(--accent);
+        }
+        
+       
         
         .nav-links ul {
             display: flex;
