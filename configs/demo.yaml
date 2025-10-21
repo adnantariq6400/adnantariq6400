@@ -1,0 +1,9 @@
+# Example config for running the pipeline on CSVs
+longitudinal_csv: outputs/demo/longitudinal.csv
+survival_csv: outputs/demo/survival.csv
+biomarker_col: biomarker
+time_col: time
+event_col: event
+id_col: participant_id
+adjust_cols: [sex, age0]
+normal_range: [80, 120]

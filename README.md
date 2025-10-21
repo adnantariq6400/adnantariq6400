@@ -1,59 +1,42 @@
-# 👋 Hi, I'm [Adnan]!
+# Biomarker Optimal Ranges & Setpoints Pipeline
 
-I'm a **Bioinformatics enthusiast** Equipped with a strong background in **Bioinformatics** and focus on **Microbiome – Host Interactions, Metagenomic Analysis, and NGS Analysis**. Dedicated researcher have expertise in Linux, Bash Scripting, Machine Learning, and Programming (Python, R).
+A reproducible pipeline to analyze biomarker optimal ranges and individual setpoints across large cohorts. Includes a synthetic demo run with end-to-end outputs.
 
----
+## Quick start
 
-[📄 Checkout My CV/Resume](https://github.com/adnantariq6400/adnantariq6400/blob/main/Resume_Adnan.pdf))
+```bash
+# 1) Create and activate a virtual environment (recommended)
+python -m venv .venv && source .venv/bin/activate
 
----
+# 2) Install dependencies
+pip install -r requirements.txt
 
-📄 **Publications**
+# 3) Run the synthetic demo (no external data required)
+python -m biomarker_pipeline.cli demo --output-dir outputs/demo
 
-1. **Hafiz Muhammad Adnan Tariq, Nayyab Younas Khan, Haseeb Manzoor & Masood Ur Rehman Kayani**, *MExploring the impact of type 2 diabetes and glucose-lowering drugs on gut microbiome dynamics*. ** Discover Medicine**, 2025. [https://doi.org/xxx](https://doi.org/10.1007/s44337-025-00241-9))
+# Outputs: CSVs and PNGs under outputs/demo
+```
 
-2. **Muhammad Faheem Raziq 1,2, Nadeem Khan 2, Haseeb Manzoor 2, Hafiz Muhammad Adnan Tariq 2, Mehak Rafiq 3, Shahzad Rasool 3, Masood Ur Rehman Kayani 2,✉, Lisu Huang**, *Prioritizing gut microbial SNPs linked to immunotherapy outcomes in NSCLC patients by integrative bioinformatics analysis*. **Journal of Translational Medicine**, 2025. [https://doi.org/xxx](https://doi.org/10.1186/s12967-025-06370-0)
+## CLI usage
 
- ---
- 
-### 🔬 Current Projects
-- **T2D and Gut Metagenome-Host Interactions**: Identified exclusive CAZyme proteins, and Taxa associated with T2D patients and Employed NGS Techniques, Metagenome Analysis, Linux & Bash Scripting, Gene Family Prediction].
-- **Environmental Antibiotic Exposure in Zebrafish Gut Metagenomes**: Using Machine learning, Metagenomic Analysis, and R to identify the environmental antimicrobial resistance genes and microbial biomarkers.
-- **Gut Microbial Strains - Non-Small Cell Lung Cancer Treatment: Decoding the Connection**: Developed statistical and machine learning models to associate variants and strains with treatment responses.
+```bash
+python -m biomarker_pipeline.cli --help
+python -m biomarker_pipeline.cli demo --output-dir outputs/demo
+python -m biomarker_pipeline.cli run --config configs/demo.yaml --output-dir outputs/run1
+```
 
----
+## Contents
+- `biomarker_pipeline/`: Python package with CLI, pipeline, analysis, and viz
+- `configs/`: YAML configs for demo and templates for real data
+- `docs/design.md`: Design document with methods, workflow and example visuals
+- `outputs/`: Default output directory (created on first run)
 
-### 📚 Research Interests
-- **NGS data analysis** and Multi-Omics
-- **Microbiome-host interactions**
-- **Metagenomics**
-- **Machine learning and computational modeling**
+## BigQuery (optional)
+Set the following environment variables if connecting to BigQuery:
 
----
+```
+GOOGLE_CLOUD_PROJECT=your-project-id
+GOOGLE_APPLICATION_CREDENTIALS=/path/to/service-account.json
+```
 
-### 🎓 Education & Accomplishments
-- Work in collaboration at research project "Machine learning identifies microbial biomarkers of environmental antibiotic exposure in zebrafish gut metagenomes" with **Shanghai Jiao Tong University, China**.
-- Developed Developed bioinformatics pipelines using using tools like BWA, BLAST, and Samtools and perform Network analysis.
-- Lead Outreach of **ISCB-SC Regional Student Council Pakistan**.
-- **Best Director of the Year** Award of **NUST Bazm-e-Pakistan**.
-
----
-
-### 🌱 Future Goals
-- **PhD aspirations:** I'm applying to labs that focus on computational modeling, multi-omics, cancer biology, and host-microbiome interactions.
-- Seeking collaboration in research projects of **Metagenomes and NGS Data Analysis**.
-
----
-
-### 🛠️ Tech Stack & Tools
-- **Languages**: Python, R, Linux, Shell Scripting
-- **Tools**: Fastp, fastQC, antiSMASH, AMPHORA2, CoverM, DIAMOND, STAR, Bowtie, BWA, BLAST, Samtools, AntiSMASH, Bioconda, and more.
-- **Data Analysis**: Pandas, Scikit-learn, Biopython, SPSS, Minitab, MATLAB, R.
-- **Version Control**: Git, GitHub
-
----
-
-### 🌍 Let's Connect!
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin)](www.linkedin.com/in/adnan-tariq-9487a1169)  
-[![Email](https://img.shields.io/badge/Email-Contact-red?logo=gmail)](mailto:adnantariq2525@gmail.com)  
-[![ORCID](https://img.shields.io/badge/ORCID-Profile-brightgreen?logo=orcid)](https://orcid.org/0009-0008-8499-8803)
+Then implement dataset-specific queries in `biomarker_pipeline/data_access/bigquery_client.py` and mappings in `biomarker_pipeline/harmonization/`.
