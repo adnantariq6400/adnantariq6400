@@ -64,20 +64,11 @@ BigQuery cohort tables
       └─ Outputs: CSV tables, PNG plots, summary
 ```
 
-## Example outputs
+## Outputs
 - Risk curve with candidate optimal band overlay.
 - Trajectories with setpoint overlay; distribution of setpoints.
 - Error vs number of repeats curve.
-
-## Interview Q&A cheat sheet
-- **Is this bioinformatics/metagenomics?** No. It is epidemiology/biostatistics for clinical biomarkers; not metagenomics. Could be framed as precision medicine/clinical risk modeling.
-- **Purpose?** Identify risk-minimizing subranges within normal intervals and quantify/set use of individual setpoints to improve risk prediction.
-- **How test optimal ranges?** Cox PH with restricted cubic splines; define practical band as contiguous region within (1+δ)×min RR; validate across cohorts/subgroups and via sensitivity to knot choices.
-- **How estimate setpoints?** Random-intercept (optionally random-slope/AR(1)) mixed models; report between vs within-person variance and ICC; derive personalized intervals and test whether deviation from setpoint improves C-index/IBS/NRI vs population deviation.
-- **How many repeats needed?** Compare setpoint estimates using first k visits to gold (all visits) with MAE/RMSE; run simulations varying within-person SD, measurement error, drift, and missingness to recommend k achieving target MAE.
-- **Confounding & error?** Adjust for age, sex, comorbidities; consider seasonality, lab batch; assess PH assumption; consider SIMEX for measurement error; multiple imputation for missingness if MAR.
-- **Generalizability?** Cross-cohort validation, random-effects meta-analysis, subgroup heterogeneity, transportability checks.
-
+- 
 ## BigQuery extraction & harmonization (example)
 Example longitudinal extraction (pseudo-SQL):
 ```sql
