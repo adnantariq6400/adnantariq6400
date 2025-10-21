@@ -68,7 +68,7 @@ BigQuery cohort tables
 - Risk curve with candidate optimal band overlay.
 - Trajectories with setpoint overlay; distribution of setpoints.
 - Error vs number of repeats curve.
-- 
+
 ## BigQuery extraction & harmonization (example)
 Example longitudinal extraction (pseudo-SQL):
 ```sql
