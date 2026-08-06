@@ -17,7 +17,7 @@ I'm a **Bioinformatics enthusiast** Equipped with a strong background in **Bioin
  ---
  
 ### 🔬 Current Projects
-- **T2D and Gut Metagenome-Host Interactions**: Identified exclusive CAZyme proteins, and Taxa associated with T2D patients and Employed NGS Techniques, Metagenome Analysis, Linux & Bash Scripting, Gene Family Prediction].
+- **T2D and Gut Metagenome-Host Interactions**: Identified exclusive CAZyme proteins, and Taxa associated with T2D patients and Employed NGS Techniques, Metagenome Analysis, Linux & Bash Scripting, Gene Family Prediction.
 - **Environmental Antibiotic Exposure in Zebrafish Gut Metagenomes**: Using Machine learning, Metagenomic Analysis, and R to identify the environmental antimicrobial resistance genes and microbial biomarkers.
 - **Gut Microbial Strains - Non-Small Cell Lung Cancer Treatment: Decoding the Connection**: Developed statistical and machine learning models to associate variants and strains with treatment responses.
 
