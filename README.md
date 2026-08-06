@@ -40,7 +40,7 @@ I'm a **Bioinformatics enthusiast** Equipped with a strong background in **Bioin
 ---
 
 ### 🌱 Future Goals
-- **PhD aspirations:** I'm applying to labs that focus on computational modeling, multi-omics, cancer biology, Metabolic Diseases, and host-microbiome interactions.
+- **PhD aspirations:** I'm applying to labs that focus on Computational Modeling, Multi-omics, Cancer Biology, Metabolic Diseases, and Host-Microbiome Interactions.
 - Seeking collaboration in research projects of **Metagenomes and NGS Data Analysis**.
 
 ---
