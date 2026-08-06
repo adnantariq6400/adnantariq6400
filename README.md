@@ -10,7 +10,7 @@ I'm a **Bioinformatics enthusiast** Equipped with a strong background in **Bioin
 
 📄 **Publications**
 
-1. **Hafiz Muhammad Adnan Tariq, Nayyab Younas Khan, Haseeb Manzoor & Masood Ur Rehman Kayani**, *MExploring the impact of type 2 diabetes and glucose-lowering drugs on gut microbiome dynamics*. ** Discover Medicine**, 2025. [https://doi.org/xxx](https://doi.org/10.1007/s44337-025-00241-9))
+1. **Hafiz Muhammad Adnan Tariq, Nayyab Younas Khan, Haseeb Manzoor & Masood Ur Rehman Kayani**, *MExploring the impact of type 2 diabetes and glucose-lowering drugs on gut microbiome dynamics*. **Discover Medicine**, 2025. [https://doi.org/xxx](https://doi.org/10.1007/s44337-025-00241-9))
 
 2. **Muhammad Faheem Raziq 1,2, Nadeem Khan 2, Haseeb Manzoor 2, Hafiz Muhammad Adnan Tariq 2, Mehak Rafiq 3, Shahzad Rasool 3, Masood Ur Rehman Kayani 2,✉, Lisu Huang**, *Prioritizing gut microbial SNPs linked to immunotherapy outcomes in NSCLC patients by integrative bioinformatics analysis*. **Journal of Translational Medicine**, 2025. [https://doi.org/xxx](https://doi.org/10.1186/s12967-025-06370-0)
 
